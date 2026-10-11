@@ -1,0 +1,406 @@
+[
+  {
+    "id": "module-zh-1",
+    "title": "詩歌伴奏入門",
+    "description": "由零開始學習詩歌鋼琴伴奏，掌握基本左手節奏、右手旋律及簡單和弦，即可彈奏崇拜詩歌。",
+    "difficulty": "Easy",
+    "sortOrder": 0,
+    "lessons": [
+      {
+        "id": "zh-1",
+        "title": "基礎系列 — 讚美的詩歌：救贖的恩典",
+        "description": "以C調為起點，學習最基礎的鋼琴伴奏框架，即時能彈讚美詩歌。",
+        "youtubeId": "k70NAYSsuzA",
+        "sortOrder": 0,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-2",
+        "title": "必學伴奏中的旋律 — 我要向高山舉目",
+        "description": "把旋律融入伴奏中，讓整體彈奏更豐富、更具靈氣，適合司琴新手。",
+        "youtubeId": "DTdeKVOkftM",
+        "sortOrder": 1,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-3",
+        "title": "左手 1-5-8-5 基礎伴奏 — 主祢是我盼望",
+        "description": "掌握左手最實用的 1-5-8-5 音型，輕鬆撐起任何詩歌伴奏。",
+        "youtubeId": "Ju0yye7mgL4",
+        "sortOrder": 2,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-4",
+        "title": "重複旋律伴奏法 — 寶貴恩典",
+        "description": "學習用重複旋律製造音樂感，即使和弦簡單，彈奏也能有感染力。",
+        "youtubeId": "kK3HqLboXB0",
+        "sortOrder": 3,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-5",
+        "title": "2 個音和弦伴奏 — 住在祢裡面",
+        "description": "用最少音符彈出完整的詩歌感，是初學司琴最快入門的方法之一。",
+        "youtubeId": "qPfwXevZFEE",
+        "sortOrder": 4,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-6",
+        "title": "萬用 1-5-8 節奏大法 — 奔跑不放棄",
+        "description": "一個節奏型套用整首詩歌，立即讓你的伴奏更穩定流暢。",
+        "youtubeId": "FNlliKNVOAM",
+        "sortOrder": 5,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-oc-1",
+        "title": "3個練Chord入門基本功 — 阿詩教授",
+        "description": "初學司琴必看！3個由零開始練習和弦的好方法，讓你快速建立敬拜彈奏的手感與信心。",
+        "youtubeId": "FyMhJQ4PrW8",
+        "sortOrder": 6,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-2",
+        "title": "如何雙手都彈Chord？3個雙手彈chord的Patterns",
+        "description": "阿詩老師教授3種雙手彈和弦的 pattern，讓伴奏更豐富飽滿，適合有基礎的初學者。",
+        "youtubeId": "MYR7huhPeq0",
+        "sortOrder": 7,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-3",
+        "title": "彈Chord進階技巧 — 萬用158",
+        "description": "學習「萬用158」和弦進階技巧，一招提升敬拜伴奏的質感與立體感。",
+        "youtubeId": "k6c-Qyw5Bcg",
+        "sortOrder": 8,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      }
+    ]
+  },
+  {
+    "id": "module-zh-3",
+    "title": "司琴進階技巧",
+    "description": "提升司琴伴奏質素：Fill-in 過門、左手節奏變化、Sus 和弦應用及轉調技巧，讓崇拜更流暢自然。",
+    "difficulty": "Moderate",
+    "sortOrder": 1,
+    "lessons": [
+      {
+        "id": "zh-12",
+        "title": "左手伴奏 16 分音符技巧 — 阿爸天父",
+        "description": "學習左手 16 分音符節奏型，為詩歌伴奏加添律動感與專業度。",
+        "youtubeId": "Chdp9ps384k",
+        "sortOrder": 0,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-13",
+        "title": "左手節奏及 Echo Fill-in — 主祢是我盼望",
+        "description": "掌握「回聲」填音技術，讓詩歌段落之間的過渡更自然有質感。",
+        "youtubeId": "UBb7q96sFEo",
+        "sortOrder": 1,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-14",
+        "title": "進階 Fill-in 技巧 — 藏你懷內",
+        "description": "系統性學習填音（Fill-in）技巧，讓你的過門音符更具音樂性。",
+        "youtubeId": "Y02A_oeorUc",
+        "sortOrder": 2,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-15",
+        "title": "專業 Fill-in 2.0 — 因著信",
+        "description": "升級版的填音技法，融合旋律與和弦，讓司琴伴奏更像專業錄音。",
+        "youtubeId": "0YnBR4QEgiY",
+        "sortOrder": 3,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-16",
+        "title": "Passing Notes 過渡音 — 十架犧牲的愛",
+        "description": "學習在和弦之間加入 Passing Notes，使和弦進行更加流暢優美。",
+        "youtubeId": "qLECe27NLUo",
+        "sortOrder": 4,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-17",
+        "title": "長拍可以彈什麼？4 招實用技巧",
+        "description": "詩歌長拍位不再「發呆」——學會 4 種填充長音的方法，讓伴奏持續有生命。",
+        "youtubeId": "YKMoVxqp1RM",
+        "sortOrder": 5,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-18",
+        "title": "Sus2、Sus4、Sus6 和弦一次搞懂 — 求主看見異象",
+        "description": "全面掌握 Sus 類和弦的彈法與應用時機，立即讓伴奏更現代。",
+        "youtubeId": "qRh2_GWfDn4",
+        "sortOrder": 6,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-19",
+        "title": "右手 Broken Chord 變化到複雜轉位及 Sus 和弦",
+        "description": "從基礎 Broken Chord 開始，進化到複雜右手技巧，全方位提升右手表達力。",
+        "youtubeId": "-y0SYiBQwFI",
+        "sortOrder": 7,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-20",
+        "title": "百搭 Pattern 節奏教學 — 求主看見異象",
+        "description": "一個節奏 Pattern 可以配合不同詩歌風格，靈活應用於各種崇拜場合。",
+        "youtubeId": "WO6r8Ni7VWg",
+        "sortOrder": 8,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-21",
+        "title": "接駁下首歌的轉調方法",
+        "description": "學習如何在崇拜中無縫轉調到下一首詩歌，讓整個敬拜服事更流暢專業。",
+        "youtubeId": "RY4GVSX9UXA",
+        "sortOrder": 9,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-oc-4",
+        "title": "前奏彈法3個貼士 — 凝造敬拜氣氛",
+        "description": "詩老師教授3個讓前奏更有敬拜感的貼士，幫助會眾在詩歌一開始就進入敬拜狀態。",
+        "youtubeId": "uMH9kUB58Io",
+        "sortOrder": 10,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-5",
+        "title": "空間感長過門 — 3個貼士增加過門空間感",
+        "description": "學習如何在詩歌長拍位及過門加入空間感，讓崇拜更有層次和呼吸感。",
+        "youtubeId": "kGgsYD_PSmk",
+        "sortOrder": 11,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-6",
+        "title": "快歌必殺技 — 司琴彈快歌的關鍵技巧",
+        "description": "專為司琴而設的快歌技巧，掌握節奏感與和弦節拍，讓敬拜隊在快歌中更緊密配合。",
+        "youtubeId": "hkKndRX0uY4",
+        "sortOrder": 12,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-7",
+        "title": "司琴澎湃大法 — 讓敬拜更有能量",
+        "description": "學習如何在司琴伴奏中製造澎湃感，帶動會眾敬拜的情緒與投入感。",
+        "youtubeId": "uqNZOcUi01k",
+        "sortOrder": 13,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-oc-8",
+        "title": "司琴靈修大法 — 在靈修詩歌中安靜彈奏",
+        "description": "學習如何在靈修時段用鋼琴創造安靜、親密的敬拜氣氛，與會眾一起在神面前安靜。",
+        "youtubeId": "9xTD_8QOqgI",
+        "sortOrder": 14,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-gs-1",
+        "title": "第一課：彈奏出内心感受 — 玻璃海敬拜教室",
+        "description": "學習如何在彈奏時真實表達內心的感受，讓詩歌伴奏不只是音符的組合，更成為真誠的敬拜表達。",
+        "youtubeId": "UMCNjd5Ael4",
+        "sortOrder": 15,
+        "channelName": "玻璃海敬拜教室"
+      },
+      {
+        "id": "zh-gs-2",
+        "title": "第二課：快歌的處理 (Part 1) — 玻璃海敬拜教室",
+        "description": "系統性學習快歌的處理技巧，掌握快歌節奏、和弦應用方法，帶動會眾在快歌中投入敬拜。",
+        "youtubeId": "JmeZpbMulgU",
+        "sortOrder": 16,
+        "channelName": "玻璃海敬拜教室"
+      }
+    ]
+  },
+  {
+    "id": "module-zh-4",
+    "title": "Jazz 詩歌彈奏入門",
+    "description": "將 Jazz 元素融入詩歌伴奏，從基本 Jazz 感覺到特殊和弦，突破「彈奏單調」的瓶頸。",
+    "difficulty": "Hard",
+    "sortOrder": 2,
+    "lessons": [
+      {
+        "id": "zh-22",
+        "title": "L47 — 彈出 Jazz 感覺：特別和弦（至高尊貴的祢）",
+        "description": "入門 Jazz 詩歌，學習一個「特別和弦」即可為詩歌注入 Jazz 色彩。",
+        "youtubeId": "TOcXIncl9BA",
+        "sortOrder": 0,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-23",
+        "title": "L48 — Jazz 感覺靠這 4 個技巧",
+        "description": "4 個核心技巧讓你的詩歌伴奏立即有 Jazz 風味，適用於大部分崇拜詩歌。",
+        "youtubeId": "vHPQv606tg4",
+        "sortOrder": 1,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-24",
+        "title": "Jazz 詩歌教學第一課 — Jazz 詩歌彈法",
+        "description": "系統性 Jazz 詩歌課程第一堂，打好 Jazz 和聲基礎，了解 Jazz 在崇拜中的角色。",
+        "youtubeId": "MQgwzYNA9p0",
+        "sortOrder": 2,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-25",
+        "title": "Jazz 詩歌教學第二課 — 8 種技巧（愛中相遇）",
+        "description": "以《愛中相遇》為例，系統學習 8 種 Jazz 詩歌伴奏技巧，大幅提升音樂性。",
+        "youtubeId": "ZmialiwnARA",
+        "sortOrder": 3,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-26",
+        "title": "Jazz 詩歌教學第三課 — b9 及 6/9 和弦",
+        "description": "引入 b9 和 6/9 等進階 Jazz 和弦，為詩歌增添獨特的張力與色彩。",
+        "youtubeId": "JfqW9lNr0xg",
+        "sortOrder": 4,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-27",
+        "title": "Jazz 詩歌教學第四課 — 綜合技巧（倚靠 / 讚美之泉）",
+        "description": "綜合前三課所學，應用於多首詩歌，鞏固 Jazz 詩歌彈奏的整體感覺。",
+        "youtubeId": "rpF-I47QSoU",
+        "sortOrder": 5,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-28",
+        "title": "Jazz 詩歌教學第五課 — 聖哉聖哉",
+        "description": "進階課程壓軸一堂，以《聖哉聖哉》示範完整 Jazz 詩歌彈奏，挑戰更高層次。",
+        "youtubeId": "EmP76gzqYI8",
+        "sortOrder": 6,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-29",
+        "title": "這是天父世界 — Jazz 版",
+        "description": "Jazz 風格的詩歌鋼琴示範，觀察所有 Jazz 技巧如何融入一首完整詩歌。",
+        "youtubeId": "Y0JTRnB5ZCw",
+        "sortOrder": 7,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-30",
+        "title": "豐富和弦應用 — 全因基督",
+        "description": "以《全因基督》為例，示範如何以豐富和弦重新編排熟悉的詩歌。",
+        "youtubeId": "2ANvq-7siUY",
+        "sortOrder": 8,
+        "channelName": "Mike Chan Ka Sing"
+      }
+    ]
+  },
+  {
+    "id": "module-zh-2",
+    "title": "詩歌示範",
+    "description": "精選詩歌鋼琴示範，無人聲干擾，可用作靈修、司琴參考及團契播放。",
+    "difficulty": "Song Tutorials",
+    "sortOrder": 3,
+    "lessons": [
+      {
+        "id": "zh-song-11",
+        "title": "平安 — 初級司琴訓練",
+        "description": "《平安》初級司琴訓練示範，以簡易和弦伴奏演奏，適合入門司琴練習與參考。",
+        "youtubeId": "WUgH2N4FDUA",
+        "sortOrder": 0,
+        "channelName": "《盼望愛》音樂事工"
+      },
+      {
+        "id": "zh-song-8",
+        "title": "因著信 — 前奏司琴技巧訓練",
+        "description": "《因著信》前奏司琴技巧訓練示範，學習如何處理前奏與進入詩歌的伴奏。",
+        "youtubeId": "fOZx2PbEKGs",
+        "sortOrder": 1,
+        "channelName": "《盼望愛》音樂事工"
+      },
+      {
+        "id": "zh-7",
+        "title": "我的心你要稱頌耶和華（純音樂示範）",
+        "description": "附歌詞的鋼琴主旋律純音樂版，適合司琴參考、靈修及團契使用。",
+        "youtubeId": "ZqGBsIXbtuc",
+        "sortOrder": 2,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-oc-9",
+        "title": "信 — 同心圓（Piano Cover）",
+        "description": "同心圓詩歌《信》的鋼琴示範版，感受如何以細膩的觸鍵與動態詮釋這首充滿信心的詩歌。",
+        "youtubeId": "K9lyUave-9Q",
+        "sortOrder": 3,
+        "channelName": "同心圓敬拜福音平台 (One Circle)"
+      },
+      {
+        "id": "zh-9",
+        "title": "恩典之路 — 鋼琴示範",
+        "description": "溫柔流暢的鋼琴示範，觀察如何處理詩歌的動態起伏與句尾收音。",
+        "youtubeId": "jQnkKqJ685Q",
+        "sortOrder": 4,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-song-10",
+        "title": "恩典太美麗 — 前奏司琴技巧訓練",
+        "description": "《恩典太美麗》前奏司琴技巧訓練與示範，學習如何編寫與演奏前奏。",
+        "youtubeId": "P6qUIBNsvg8",
+        "sortOrder": 5,
+        "channelName": "《盼望愛》音樂事工"
+      },
+      {
+        "id": "zh-10",
+        "title": "唯有耶穌 — 鋼琴示範",
+        "description": "附有樂譜的示範版本，適合邊聽邊對譜，加速學習。",
+        "youtubeId": "KoWDINk4V0U",
+        "sortOrder": 6,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-8",
+        "title": "這一生最美的祝福 — 讚美之泉",
+        "description": "讚美之泉經典詩歌的鋼琴純音樂版，感受如何用旋律帶出詩歌的意境。",
+        "youtubeId": "ci5WzHTgyFA",
+        "sortOrder": 7,
+        "channelName": "Mike Chan Ka Sing"
+      },
+      {
+        "id": "zh-song-9",
+        "title": "愛是不保留 — 初級司琴訓練",
+        "description": "初級司琴訓練示範，以簡易和弦伴奏演奏《愛是不保留》，適合入門司琴練習與參考。",
+        "youtubeId": "FIy7LL5MvMw",
+        "sortOrder": 8,
+        "channelName": "《盼望愛》音樂事工"
+      },
+      {
+        "id": "zh-song-12",
+        "title": "獻給我天上的主 — 純音樂示範",
+        "description": "《獻給我天上的主》純音樂示範，適合靈修、司琴參考及團契播放。",
+        "youtubeId": "22gdKLJkNQw",
+        "sortOrder": 9,
+        "channelName": "《盼望愛》音樂事工"
+      },
+      {
+        "id": "zh-11",
+        "title": "讚美之泉 — 我的生命獻給祢（Piano Cover）",
+        "description": "富有感情的鋼琴演奏版，感受如何在詩歌中注入個人的敬拜情感。",
+        "youtubeId": "jsY8DJKbuNs",
+        "sortOrder": 10,
+        "channelName": "Mike Chan Ka Sing"
+      }
+    ]
+  }
+]

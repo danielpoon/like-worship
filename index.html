@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Like Worship — Piano Lessons</title>
+  <meta name="description" content="Learn worship piano step by step. Browse Easy, Moderate, Hard, and Song Tutorial lessons. Watch YouTube videos right inside the page — no login needed." />
+
+  <!-- Open Graph (iMessage, WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://like-worship.danielpoon.com" />
+  <meta property="og:title"       content="Like Worship — Worship Piano Lessons" />
+  <meta property="og:description" content="Learn worship piano step by step. Browse Easy, Moderate, Hard, and Song Tutorial lessons. Watch YouTube videos right inside the page — no login needed." />
+  <meta property="og:image"       content="https://like-worship.danielpoon.com/og-banner.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:site_name"   content="Like Worship" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Like Worship — Worship Piano Lessons" />
+  <meta name="twitter:description" content="Learn worship piano step by step. Browse Easy, Moderate, Hard, and Song Tutorial lessons. Watch YouTube videos right inside the page — no login needed." />
+  <meta name="twitter:image"       content="https://like-worship.danielpoon.com/og-banner.jpg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Like Worship" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#2ca4fb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)" />
+  <style>
+    /* ─── Reset & Base ────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    svg { display: block; flex-shrink: 0; }
+
+    /* ─── Theme variables ─────────────────────────────────── */
+
+    /* Pink — warm default light */
+    :root,
+    [data-theme="pink"] {
+      --accent:        #e25a95;
+      --accent-dark:   #c94680;
+      --accent-soft:   #fbdde9;
+      --surface:       #f7f4f5;   /* warm off-white, not pure white */
+      --surface-2:     #f2eff1;
+      --sidebar-bg:    #efe9ed;
+      --fill:          #e9e5e8;
+      --fill-strong:   #ddd8dc;
+      --ink:           #1c1c1e;
+      --ink-2:         #3c3c43;
+      --muted:         #8e8e93;
+      --icon:          #6e6e73;
+      --faint:         #c7c7cc;
+      --hairline:      #e4e0e3;
+      --line:          #d6d2d5;
+      --selection-bg:  #fbdde9;
+      color-scheme:    light;
+    }
+
+    /* Blue — clean light with blue accent */
+    [data-theme="blue"] {
+      --accent:        #2ca4fb;
+      --accent-dark:   #1b8fe6;
+      --accent-soft:   #d3e8fd;
+      --surface:       #f5f7fa;   /* cool off-white, not pure white */
+      --surface-2:     #f0f2f6;
+      --sidebar-bg:    #eaedf3;
+      --fill:          #e5e8ef;
+      --fill-strong:   #d8dce6;
+      --ink:           #1c1c1e;
+      --ink-2:         #3c3c43;
+      --muted:         #8e8e93;
+      --icon:          #6e6e73;
+      --faint:         #c7c7cc;
+      --hairline:      #e0e3ea;
+      --line:          #d4d7e0;
+      --selection-bg:  #d3e8fd;
+      color-scheme:    light;
+    }
+
+    /* Gray — macOS-style dark mode */
+    [data-theme="gray"] {
+      --accent:        #aeaeb2;
+      --accent-dark:   #d1d1d6;
+      --accent-soft:   #3a3a3c;
+      --surface:       #1c1c1e;
+      --surface-2:     #2c2c2e;
+      --sidebar-bg:    #161618;
+      --fill:          #2c2c2e;
+      --fill-strong:   #3a3a3c;
+      --ink:           #f5f5f7;
+      --ink-2:         #d1d1d6;
+      --muted:         #8e8e93;
+      --icon:          #aeaeb2;
+      --faint:         #48484a;
+      --hairline:      #2c2c2e;
+      --line:          #3a3a3c;
+      --selection-bg:  #3a3a3c;
+      color-scheme:    dark;
+    }
+
+    /* ─── Layout ──────────────────────────────────────────── */
+    .app {
+      display: flex;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Backdrop for mobile sidebar */
+    .backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(0,0,0,.22);
+    }
+    .backdrop.open { display: block; }
+
+    /* ─── Sidebar ─────────────────────────────────────────── */
+    .sidebar {
+      width: 310px;
+      flex-shrink: 0;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      transition: transform 0.24s ease, margin 0.24s ease;
+      z-index: 41;
+    }
+    .sidebar.collapsed { margin-left: -310px; }
+
+    @media (max-width: 767px) {
+      .sidebar {
+        position: fixed;
+        inset-y: 0;
+        left: 0;
+        width: 82%;
+        max-width: 300px;
+        box-shadow: 0 20px 60px rgba(0,0,0,.18);
+        transform: translateX(-105%);
+        margin: 0 !important;
+      }
+      .sidebar.mobile-open { transform: translateX(0); }
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 16px 14px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .logo-line1 {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: .03em;
+    }
+    .logo-line2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.02em;
+    }
+
+    /* Settings button + lang switcher in logo row */
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 12px 14px 16px;
+      flex-shrink: 0;
+    }
+    .logo-row .logo { padding: 0; }
+    .logo-row-right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .settings-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--icon);
+      transition: background .12s, color .12s;
+    }
+    .settings-btn:hover { background: var(--fill); color: var(--ink-2); }
+
+    /* Language switcher */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      background: var(--fill);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 1px;
+    }
+    .lang-btn {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 6px;
+      color: var(--muted);
+      transition: background .12s, color .12s;
+      line-height: 1.4;
+    }
+    .lang-btn.active {
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    .lang-btn:hover:not(.active) { color: var(--ink-2); }
+
+    /* Search box */
+    .search-wrap {
+      padding: 0 10px 10px;
+      flex-shrink: 0;
+    }
+    .search-inner {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--fill);
+      border-radius: 9px;
+      padding: 7px 10px;
+      border: 1.5px solid transparent;
+      transition: border-color .15s, background .15s;
+    }
+    .search-inner:focus-within {
+      background: var(--surface);
+      border-color: var(--accent);
+    }
+    .search-inner svg { color: var(--faint); flex-shrink: 0; transition: color .15s; }
+    .search-inner:focus-within svg { color: var(--accent); }
+    .search-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: 13px;
+      color: var(--ink);
+      min-width: 0;
+    }
+    .search-input::placeholder { color: var(--faint); }
+    .search-clear {
+      color: var(--faint);
+      font-size: 17px;
+      line-height: 1;
+      padding: 0 2px;
+      transition: color .12s;
+    }
+    .search-clear:hover { color: var(--muted); }
+
+    /* Search results list */
+    .search-results {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+      padding: 4px 8px 24px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--fill-strong) transparent;
+    }
+    .search-no-results {
+      padding: 24px 12px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--faint);
+    }
+    .search-result-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      width: 100%;
+      text-align: left;
+      padding: 8px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: background .12s;
+    }
+    .search-result-item:hover { background: var(--fill); }
+    .search-result-item.active { background: var(--selection-bg); }
+    .sri-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .sri-title mark {
+      background: none;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .sri-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Sidebar nav scroll */
+    .sidebar-nav {
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+      padding: 4px 8px 24px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--fill-strong) transparent;
+    }
+
+    /* Difficulty group */
+    .diff-group { margin-bottom: 4px; }
+
+    .diff-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 7px 8px 7px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      user-select: none;
+      transition: background .12s;
+    }
+    .diff-header:hover { background: var(--fill); }
+    .diff-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .diff-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .diff-dot.easy         { background: #4cbe5a; }
+    .diff-dot.moderate     { background: #f6833f; }
+    .diff-dot.hard         { background: var(--accent); }
+    .diff-dot.song-tutorials { background: #f5a623; }
+
+    .diff-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      color: var(--muted);
+    }
+    .diff-count {
+      font-size: 11px;
+      color: var(--faint);
+      margin-left: 4px;
+    }
+    .diff-chevron {
+      color: var(--faint);
+      transition: transform .2s;
+    }
+    .diff-chevron.open { transform: rotate(90deg); }
+
+    /* Module group */
+    .module-group { margin: 1px 0; }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 8px 6px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: background .12s;
+      gap: 6px;
+    }
+    .module-header:hover { background: var(--fill); }
+    .module-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-2);
+      flex: 1;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .module-chevron {
+      color: var(--faint);
+      flex-shrink: 0;
+      transition: transform .18s;
+    }
+    .module-chevron.open { transform: rotate(90deg); }
+
+    /* Lesson links */
+    .lesson-list { padding-left: 4px; }
+
+    .lesson-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      text-align: left;
+      padding: 5px 8px 5px 32px;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background .12s;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.4;
+    }
+    .lesson-btn:hover { background: var(--fill); color: var(--ink-2); }
+    .lesson-btn.active {
+      background: var(--selection-bg);
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .lesson-play-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      opacity: .55;
+      align-self: flex-start;
+      margin-top: 5px;
+    }
+    .lesson-btn.active .lesson-play-dot { opacity: 1; }
+    .lesson-btn.visited { color: var(--ink-2); }
+    .lesson-check {
+      display: none;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-left: auto;
+      align-self: flex-start;
+      margin-top: 5px;
+    }
+    .lesson-btn.visited .lesson-check { display: block; }
+    .lesson-btn.active.visited .lesson-check { background: var(--accent); }
+
+    /* ─── Main pane ───────────────────────────────────────── */
+    .main {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      scrollbar-width: thin;
+      scrollbar-color: var(--fill-strong) transparent;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--surface);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .hamburger {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--icon);
+      flex-shrink: 0;
+      transition: background .12s, color .12s;
+    }
+    .hamburger:hover { background: var(--fill); color: var(--ink-2); }
+
+    .topbar-title-wrap {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .topbar-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+    }
+    .topbar-subtitle {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+      margin-top: 1px;
+      display: none;
+    }
+    .topbar-subtitle.visible { display: block; }
+    .topbar-subtitle-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: 0px;
+    }
+    .dot-easy          { background: #4cbe5a; }
+    .dot-moderate      { background: #f6833f; }
+    .dot-hard          { background: var(--accent); }
+    .dot-song-tutorials { background: #f5a623; }
+
+    /* ─── Welcome screen ──────────────────────────────────── */
+    .welcome {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+      gap: 12px;
+    }
+    .welcome-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+    .welcome-icon svg { color: var(--accent); }
+    .welcome h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.02em;
+    }
+    .welcome p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 300px;
+      line-height: 1.6;
+    }
+
+    /* ─── Video pane ──────────────────────────────────────── */
+    .video-pane {
+      flex: 1;
+      padding: 20px 24px 32px;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 8px 40px rgba(0,0,0,.12);
+    }
+    .video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-meta {
+      margin-top: 20px;
+    }
+    .video-meta-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .video-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.02em;
+      line-height: 1.3;
+      flex: 1;
+      min-width: 0;
+    }
+    .video-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .badge-easy           { background: #dcf5e0; color: #1a7a27; }
+    .badge-moderate       { background: #feebd8; color: #a84400; }
+    .badge-hard           { background: var(--accent-soft); color: var(--accent-dark); }
+    .badge-song-tutorials { background: #fef3dc; color: #a06400; }
+
+    /* Dark mode badge overrides */
+    [data-theme="gray"] .badge-easy           { background: #1a3a1f; color: #4cd964; }
+    [data-theme="gray"] .badge-moderate       { background: #3a2510; color: #ff9f0a; }
+    [data-theme="gray"] .badge-hard           { background: #3a3a3c; color: #aeaeb2; }
+    [data-theme="gray"] .badge-song-tutorials { background: #3a2e10; color: #f5a623; }
+
+    /* Channel name tag */
+    .video-channel {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .video-channel svg { color: var(--accent); }
+    .video-channel:hover { color: var(--accent); text-decoration: underline; }
+
+    .video-desc {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .video-link-row {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 9px;
+      background: var(--fill);
+      color: var(--ink-2);
+      font-size: 13px;
+      font-weight: 500;
+      transition: background .12s;
+      border: 1px solid var(--hairline);
+    }
+    .yt-link:hover { background: var(--fill-strong); }
+    .yt-link svg { color: #ff0000; }
+
+    /* ─── Settings Modal ──────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0,0,0,.2);
+      backdrop-filter: blur(4px);
+      align-items: flex-end;
+      justify-content: center;
+      padding: 0 0 env(safe-area-inset-bottom);
+    }
+    .modal-overlay.open { display: flex; }
+
+    @media (min-width: 480px) {
+      .modal-overlay {
+        align-items: center;
+      }
+    }
+
+    .modal {
+      background: var(--surface);
+      border-radius: 20px 20px 0 0;
+      padding: 24px 20px 32px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 -4px 60px rgba(0,0,0,.3);
+      animation: slide-up .22s ease-out;
+      border: 1px solid var(--hairline);
+    }
+    @media (min-width: 480px) {
+      .modal { border-radius: 20px; }
+    }
+    @keyframes slide-up {
+      from { transform: translateY(20px); opacity: 0; }
+      to   { transform: none; opacity: 1; }
+    }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .modal-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    .modal-close {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--fill);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1;
+    }
+    .modal-close:hover { background: var(--fill-strong); }
+
+    .modal-section-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .theme-options {
+      display: flex;
+      gap: 10px;
+    }
+    .theme-option {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 8px 10px;
+      border-radius: 12px;
+      border: 2px solid var(--hairline);
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+    }
+    .theme-option:hover { background: var(--fill); }
+    .theme-option.active { border-color: var(--accent); background: var(--accent-soft); }
+    .theme-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+    .swatch-pink  { background: #e25a95; }
+    .swatch-blue  { background: #2ca4fb; }
+    .swatch-gray  { background: #1c1c1e; border: 1.5px solid #3a3a3c; }
+    .theme-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-2);
+    }
+
+    /* ─── Sidebar footer ─────────────────────────────────── */
+    .sidebar-footer {
+      flex-shrink: 0;
+      padding: 6px 12px 10px;
+      border-top: 1px solid var(--hairline);
+    }
+    .clear-history-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: var(--faint);
+      padding: 6px 8px;
+      border-radius: 7px;
+      width: 100%;
+      transition: background .12s, color .12s;
+    }
+    .clear-history-btn:hover { background: var(--fill); color: var(--muted); }
+
+    /* ─── Star / Bookmark button ─────────────────────────── */
+    .star-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--faint);
+      transition: color .15s, background .12s, transform .12s;
+    }
+    .star-btn:hover { background: var(--fill); color: var(--accent); }
+    .star-btn.starred { color: #f5a623; }
+    .star-btn.starred svg { fill: #f5a623; stroke: #f5a623; }
+    .star-btn svg { width: 22px; height: 22px; }
+    .star-btn:active { transform: scale(1.25); }
+
+    /* Bookmarks button in topbar */
+    .bookmarks-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--icon);
+      flex-shrink: 0;
+      position: relative;
+      transition: background .12s, color .12s;
+    }
+    .bookmarks-btn:hover { background: var(--fill); color: var(--accent); }
+    .bookmarks-badge {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 1.5px solid var(--surface);
+      display: none;
+    }
+    .bookmarks-badge.has-items { display: block; }
+
+    /* ─── Bookmarks Panel ─────────────────────────────────── */
+    .bookmarks-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(0,0,0,.2);
+      backdrop-filter: blur(4px);
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 60px 12px 12px;
+    }
+    .bookmarks-overlay.open { display: flex; }
+    .bookmarks-panel {
+      background: var(--surface);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 360px;
+      max-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 48px rgba(0,0,0,.22);
+      border: 1px solid var(--hairline);
+      animation: slide-up .2s ease-out;
+      overflow: hidden;
+    }
+    .bookmarks-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 16px 12px;
+      border-bottom: 1px solid var(--hairline);
+      flex-shrink: 0;
+    }
+    .bookmarks-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    .bookmarks-clear-btn {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background .12s, color .12s;
+    }
+    .bookmarks-clear-btn:hover { background: var(--fill); color: var(--ink-2); }
+    .bookmarks-list {
+      overflow-y: auto;
+      flex: 1;
+      padding: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--fill-strong) transparent;
+    }
+    .bookmarks-empty {
+      padding: 32px 16px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--faint);
+      line-height: 1.7;
+    }
+    .bookmark-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background .12s;
+      width: 100%;
+      text-align: left;
+    }
+    .bookmark-item:hover { background: var(--fill); }
+    .bookmark-thumb {
+      width: 64px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: var(--fill-strong);
+      flex-shrink: 0;
+    }
+    .bookmark-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .bookmark-name {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .bookmark-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .bookmark-remove {
+      color: var(--faint);
+      font-size: 18px;
+      line-height: 1;
+      padding: 4px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: color .12s, background .12s;
+    }
+    .bookmark-remove:hover { color: #c00; background: var(--fill); }
+
+    /* ─── Help button ────────────────────────────────────── */
+    .help-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.8px solid var(--faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--muted);
+      flex-shrink: 0;
+      line-height: 1;
+      transition: border-color .12s, color .12s, background .12s;
+    }
+    .help-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+    .install-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--icon);
+      flex-shrink: 0;
+      transition: background .12s, color .12s;
+    }
+    .install-btn:hover { background: var(--fill); color: var(--accent); }
+    .install-app-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .install-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .install-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .install-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .install-step p {
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .install-note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .share-inline {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: -3px;
+      margin-left: 3px;
+      color: var(--ink-2);
+    }
+
+    /* Help modal rows */
+    .help-section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin: 16px 0 8px;
+    }
+    .help-section-title:first-child { margin-top: 0; }
+    .help-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .help-row:last-child { border-bottom: none; }
+    .help-keys {
+      display: flex;
+      gap: 4px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      min-width: 100px;
+      justify-content: flex-end;
+    }
+    .help-key {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--fill);
+      border: 1px solid var(--line);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink-2);
+      padding: 2px 6px;
+      min-width: 24px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+    .help-desc {
+      flex: 1;
+      font-size: 13px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .help-gesture-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      width: 100px;
+      text-align: right;
+    }
+
+    /* ─── Saved Lessons Full Page ─────────────────────────── */
+    .saved-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 24px 32px;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .saved-page-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .saved-page-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -.02em;
+      line-height: 1.2;
+    }
+    .saved-page-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .saved-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .saved-card {
+      background: var(--surface-2);
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: box-shadow .15s, transform .15s;
+      position: relative;
+    }
+    .saved-card:hover {
+      box-shadow: 0 6px 24px rgba(0,0,0,.10);
+      transform: translateY(-2px);
+    }
+    .saved-card-thumb-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+      flex-shrink: 0;
+    }
+    .saved-card-thumb {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .saved-card-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.0);
+      transition: background .15s;
+    }
+    .saved-card:hover .saved-card-play { background: rgba(0,0,0,.28); }
+    .saved-card-play-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(.85);
+      transition: opacity .15s, transform .15s;
+    }
+    .saved-card:hover .saved-card-play-icon { opacity: 1; transform: scale(1); }
+    .saved-card-play-icon svg { color: #111; margin-left: 2px; }
+    .saved-card-body {
+      padding: 12px 12px 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .saved-card-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .saved-card-meta {
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+    .saved-card-remove {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(0,0,0,.55);
+      color: #fff;
+      font-size: 16px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .15s, background .12s;
+    }
+    .saved-card:hover .saved-card-remove { opacity: 1; }
+    .saved-card-remove:hover { background: rgba(200,0,0,.8); }
+    .saved-empty {
+      grid-column: 1 / -1;
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--faint);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .saved-empty svg { margin: 0 auto 14px; opacity: .25; }
+
+    /* ─── Mobile touch sizing ────────────────────────────── */
+    @media (max-width: 767px) {
+      /* Topbar */
+      .topbar { padding: 10px 12px; gap: 8px; }
+      .hamburger {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+      }
+      .hamburger svg { width: 22px; height: 22px; }
+
+      .help-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+      .install-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+      }
+      .install-btn svg { width: 22px; height: 22px; }
+      .bookmarks-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+      }
+      .bookmarks-btn svg { width: 22px; height: 22px; }
+      .bookmarks-badge { top: 5px; right: 5px; width: 9px; height: 9px; }
+
+      .topbar-title { font-size: 15px; }
+      .topbar-subtitle { font-size: 12px; }
+
+      /* Sidebar logo row */
+      .logo-row { padding: 16px 12px 12px 14px; }
+      .logo-icon { width: 42px; height: 42px; border-radius: 12px; }
+      .logo-line1 { font-size: 12px; }
+      .logo-line2 { font-size: 19px; }
+      .lang-btn { font-size: 13px; padding: 5px 10px; }
+      .settings-btn { width: 38px; height: 38px; border-radius: 10px; }
+
+      /* Search */
+      .search-wrap { padding: 0 10px 12px; }
+      .search-inner { padding: 10px 12px; border-radius: 12px; }
+      .search-input { font-size: 15px; }
+
+      /* Difficulty group headers */
+      .diff-header { padding: 12px 10px 12px 12px; border-radius: 12px; }
+      .diff-dot { width: 9px; height: 9px; }
+      .diff-label { font-size: 14px; letter-spacing: .05em; }
+      .diff-count { font-size: 13px; }
+      .diff-chevron svg { width: 14px; height: 14px; }
+
+      /* Module headers */
+      .module-header { padding: 11px 10px 11px 22px; border-radius: 10px; }
+      .module-title { font-size: 14.5px; }
+
+      /* Lesson buttons */
+      .lesson-btn {
+        padding: 10px 10px 10px 34px;
+        font-size: 14px;
+        border-radius: 9px;
+      }
+      .lesson-play-dot { width: 6px; height: 6px; }
+
+      /* Search results */
+      .search-result-item { padding: 11px 12px; border-radius: 12px; }
+      .sri-title { font-size: 14px; }
+      .sri-meta { font-size: 12px; }
+
+      /* Star button next to title — already 44px, no override needed */
+    }
+
+    /* ─── Utilities ───────────────────────────────────────── */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+    }
+    .hidden { display: none !important; }
+
+    /* ─── Splash screen ───────────────────────────────────── */
+    .splash {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+    .splash.hiding {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .splash-logo-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(44,164,251,.28);
+      margin-bottom: 20px;
+    }
+    .splash-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: #1c1c1e;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+    .splash-sub {
+      font-size: 15px;
+      color: var(--muted);
+      margin-top: 6px;
+      letter-spacing: .01em;
+    }
+    .splash-btn {
+      margin-top: 44px;
+      padding: 14px 48px;
+      border-radius: 14px;
+      background: #fff;
+      color: var(--accent);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+      border: 2px solid var(--accent);
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(44,164,251,.18);
+      transition: background .12s, color .12s, transform .1s, box-shadow .12s;
+    }
+    .splash-btn:hover {
+      background: var(--accent-soft);
+      box-shadow: 0 6px 24px rgba(44,164,251,.28);
+    }
+    .splash-btn:active { transform: scale(.97); }
+
+    @media (max-width: 767px) {
+      .splash-logo-icon { width: 100px; height: 100px; border-radius: 26px; }
+      .splash-name { font-size: 36px; }
+      .splash-btn { font-size: 18px; padding: 16px 52px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Splash Screen -->
+<div class="splash" id="splashScreen">
+  <div class="splash-logo-icon" aria-hidden="true">
+    <svg width="52" height="52" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="3" width="18" height="16" rx="2.5" fill="white" fill-opacity=".25"/>
+      <rect x="2" y="3" width="18" height="16" rx="2.5" stroke="white" stroke-width="1.6"/>
+      <line x1="6" y1="3" x2="6" y2="19" stroke="white" stroke-width="1"/>
+      <line x1="10" y1="3" x2="10" y2="19" stroke="white" stroke-width="1"/>
+      <line x1="14" y1="3" x2="14" y2="19" stroke="white" stroke-width="1"/>
+      <line x1="18" y1="3" x2="18" y2="19" stroke="white" stroke-width="1"/>
+      <rect x="4.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+      <rect x="8.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+      <rect x="12.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+      <rect x="16.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+    </svg>
+  </div>
+  <p class="splash-name">Like Worship</p>
+  <p class="splash-sub">Curated Worship Piano Training (Free)</p>
+  <button class="splash-btn" id="splashBtn" onclick="dismissSplash()">Let's Begin</button>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settingsModal" role="dialog" aria-modal="true" aria-label="Settings">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Settings</span>
+      <button class="modal-close" onclick="closeSettings()" aria-label="Close">×</button>
+    </div>
+    <p class="modal-section-title">Accent color</p>
+    <div class="theme-options">
+      <button class="theme-option" data-t="blue" onclick="setTheme('blue')">
+        <div class="theme-swatch swatch-blue"></div>
+        <span class="theme-name">Blue</span>
+      </button>
+      <button class="theme-option" data-t="gray" onclick="setTheme('gray')">
+        <div class="theme-swatch swatch-gray"></div>
+        <span class="theme-name">Dark</span>
+      </button>
+      <button class="theme-option" data-t="pink" onclick="setTheme('pink')">
+        <div class="theme-swatch swatch-pink"></div>
+        <span class="theme-name">Pink</span>
+      </button>
+    </div>
+
+    <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--hairline);">
+      <p class="modal-section-title">History</p>
+      <button onclick="clearVisitedConfirm(); closeSettings();" style="display:flex;align-items:center;gap:7px;font-size:13px;color:var(--muted);padding:8px 10px;border-radius:9px;width:100%;transition:background .12s,color .12s;" onmouseover="this.style.background='var(--fill)'" onmouseout="this.style.background=''">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.67"/></svg>
+        Clear visited lesson history
+      </button>
+    </div>
+
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--hairline);text-align:center;">
+      <p style="font-size:11px;color:var(--faint);">Last updated: <span id="appVersion"></span></p>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile backdrop -->
+<div class="backdrop" id="backdrop" onclick="closeSidebar()"></div>
+
+<div class="app">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo-row">
+      <button class="logo" onclick="goHome()" aria-label="Home" title="Home" style="background:none;border:none;cursor:pointer;padding:0;text-align:left;">
+        <!-- Piano glyph logo -->
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Piano keys outline -->
+            <rect x="2" y="3" width="18" height="16" rx="2.5" fill="white" fill-opacity=".25"/>
+            <rect x="2" y="3" width="18" height="16" rx="2.5" stroke="white" stroke-width="1.6"/>
+            <!-- White key dividers -->
+            <line x1="6" y1="3" x2="6" y2="19" stroke="white" stroke-width="1"/>
+            <line x1="10" y1="3" x2="10" y2="19" stroke="white" stroke-width="1"/>
+            <line x1="14" y1="3" x2="14" y2="19" stroke="white" stroke-width="1"/>
+            <line x1="18" y1="3" x2="18" y2="19" stroke="white" stroke-width="1"/>
+            <!-- Black keys -->
+            <rect x="4.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+            <rect x="8.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+            <rect x="12.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+            <rect x="16.5" y="3" width="3" height="9" rx="1" fill="white" fill-opacity=".85"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-line1">Like</span>
+          <span class="logo-line2">Worship</span>
+        </div>
+      </button>
+      <div class="logo-row-right">
+        <!-- Language switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-btn" id="langEN" onclick="setLang('en')" aria-pressed="true">EN</button>
+          <button class="lang-btn" id="langZH" onclick="setLang('zh')" aria-pressed="false">中文</button>
+        </div>
+        <button class="settings-btn" onclick="openSettings()" aria-label="Settings" title="Settings">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+      </div><!-- /.logo-row-right -->
+    </div>
+
+    <!-- Search box -->
+    <div class="search-wrap">
+      <div class="search-inner">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          class="search-input"
+          id="searchInput"
+          type="search"
+          placeholder="Search lessons…"
+          autocomplete="off"
+          spellcheck="false"
+          oninput="onSearch(this.value)"
+        />
+        <button class="search-clear hidden" id="searchClear" onclick="clearSearch()" aria-label="Clear search">×</button>
+      </div>
+    </div>
+
+    <!-- Normal nav (hidden during search) -->
+    <nav class="sidebar-nav" id="sidebarNav" aria-label="Lessons by difficulty">
+      <div style="padding: 60px 0; text-align:center; color: var(--faint); font-size:12px;">Loading…</div>
+    </nav>
+
+    <!-- Search results (shown only during search) -->
+    <div class="search-results hidden" id="searchResults" aria-live="polite"></div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main" id="main">
+
+    <div class="topbar">
+      <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()" aria-label="Toggle sidebar" aria-expanded="true">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div class="topbar-title-wrap">
+        <span class="topbar-title" id="topbarTitle">Like Worship</span>
+        <span class="topbar-subtitle" id="topbarSubtitle"></span>
+      </div>
+      <button class="install-btn" id="installBtn" onclick="openInstallHelp()" aria-label="Add to Home Screen" title="Add to Home Screen">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M12 16V4"/>
+          <polyline points="7 9 12 4 17 9"/>
+          <path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/>
+        </svg>
+      </button>
+      <button class="bookmarks-btn" id="bookmarksBtn" onclick="toggleBookmarks()" aria-label="Saved lessons" title="Saved lessons">
+        <svg width="18" height="18" fill="#f5a623" stroke="#f5a623" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <span class="bookmarks-badge" id="bookmarksBadge"></span>
+      </button>
+    </div>
+
+    <!-- Welcome state -->
+    <div class="welcome" id="welcomePane">
+      <div class="welcome-icon">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect x="2" y="4" width="20" height="16" rx="2.5"/>
+          <line x1="6" y1="20" x2="6" y2="11"/>
+          <line x1="10" y1="20" x2="10" y2="11"/>
+          <line x1="14" y1="20" x2="14" y2="4"/>
+          <line x1="18" y1="20" x2="18" y2="11"/>
+          <rect x="4" y="4" width="3" height="9" rx=".8"/>
+          <rect x="8" y="4" width="3" height="9" rx=".8"/>
+          <rect x="12" y="4" width="0" height="0"/>
+          <rect x="16" y="4" width="3" height="9" rx=".8"/>
+        </svg>
+      </div>
+      <h2>Pick a lesson</h2>
+      <p>Choose a difficulty on the left and tap any lesson to start watching.</p>
+    </div>
+
+    <!-- Video pane (hidden until a lesson is selected) -->
+    <div class="video-pane hidden" id="videoPane">
+      <div class="video-wrap">
+        <iframe
+          id="ytFrame"
+          src=""
+          title="YouTube lesson"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="video-meta">
+        <div class="video-meta-top">
+          <h1 class="video-title" id="videoTitle"></h1>
+          <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;margin-top:3px;">
+            <button class="star-btn" id="starBtn" onclick="toggleStar()" aria-label="Save lesson" title="Save for later">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </button>
+            <button class="help-btn" onclick="openHelp()" aria-label="Youtube Player Control" title="Youtube Player Control">?</button>
+            <span class="video-badge" id="videoBadge"></span>
+          </div>
+        </div>
+        <p class="video-desc" id="videoDesc"></p>
+        <a class="video-channel" id="videoChannel" id="ytDirectLink" href="#" target="_blank" rel="noopener noreferrer">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+          <span id="videoChannelName"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ── Saved Lessons full page (hidden until bookmarks icon clicked) ── -->
+    <div class="saved-page hidden" id="savedPage">
+      <div class="saved-page-header">
+        <div>
+          <button onclick="closeBookmarks()" style="display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:500;color:var(--accent);margin-bottom:8px;padding:4px 0;background:none;border:none;cursor:pointer;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+          </button>
+          <h2 class="saved-page-title">
+            <svg width="20" height="20" fill="#f5a623" stroke="#f5a623" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:inline-block;vertical-align:-4px;margin-right:7px;">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            Saved Lessons
+          </h2>
+          <p class="saved-page-sub" id="savedPageSub">0 lessons saved</p>
+        </div>
+        <button class="bookmarks-clear-btn" onclick="clearAllBookmarks()">Clear all</button>
+      </div>
+      <div class="saved-grid" id="savedGrid"></div>
+    </div>
+
+    <footer style="text-align:center;padding:18px 0 14px;font-size:0.72rem;opacity:0.38;letter-spacing:0.02em;flex-shrink:0;" id="mainFooter">
+      &copy; 2026 designed by Daniel Poon
+    </footer>
+
+  </main>
+</div>
+
+<!-- Help Modal -->
+<div class="modal-overlay" id="installModal" role="dialog" aria-modal="true" aria-label="Add to Home Screen">
+  <div class="modal">
+    <div class="modal-header">
+      <div style="display:flex;align-items:center;gap:10px;min-width:0;">
+        <img class="install-app-icon" src="apple-touch-icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;" />
+        <span class="modal-title" id="installModalTitle">Add to Home Screen</span>
+      </div>
+      <button class="modal-close" onclick="closeInstallHelp()" aria-label="Close">×</button>
+    </div>
+    <div id="installModalBody"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="helpModal" role="dialog" aria-modal="true" aria-label="Help">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title">Youtube Player Control</span>
+      <button class="modal-close" onclick="closeHelp()" aria-label="Close">×</button>
+    </div>
+    <div id="helpModalBody"></div>
+  </div>
+</div>
+
+<script>
+/* ── Splash ────────────────────────────────────────────── */
+function dismissSplash() {
+  const splash = document.getElementById('splashScreen');
+  splash.classList.add('hiding');
+  splash.addEventListener('transitionend', () => {
+    splash.remove();
+    // On mobile, open the sidebar so the user sees the lessons straight away
+    if (window.innerWidth < 768) openMobileSidebar();
+  }, { once: true });
+}
+
+/* ── State ─────────────────────────────────────────────── */
+let data = [];          // modules array from active JSON
+let activeLesson = null; // { moduleId, lessonId }
+let openDiffs = {};      // { Easy: true, ... }
+let openModules = {};    // { "module-1": true, ... }
+let sidebarCollapsed = false;
+let currentLang = 'en'; // 'en' | 'zh'
+let savedPageOpen = false;
+
+const THEME_KEY     = 'lw.theme';
+const DIFFS_KEY     = 'lw.openDiffs';
+const MODULES_KEY   = 'lw.openModules';
+const LANG_KEY      = 'lw.lang';
+const BOOKMARKS_KEY = 'lw.bookmarks';
+const VISITED_KEY   = 'lw.visited';
+
+/* ── Init ──────────────────────────────────────────────── */
+(async () => {
+  // Restore theme
+  const savedTheme = localStorage.getItem(THEME_KEY) || 'blue';
+  applyTheme(savedTheme, false);
+
+  // Restore language
+  currentLang = localStorage.getItem(LANG_KEY) || 'en';
+  updateLangUI();
+
+  // Restore open state
+  try { openDiffs   = JSON.parse(localStorage.getItem(DIFFS_KEY)   || '{"Easy":true}'); } catch(e){}
+  try { openModules = JSON.parse(localStorage.getItem(MODULES_KEY) || '{}'); } catch(e){}
+
+  updateBookmarksBadge();
+  await loadData(currentLang);
+})();
+
+/* ── Language ──────────────────────────────────────────── */
+async function setLang(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+  localStorage.setItem(LANG_KEY, lang);
+  updateLangUI();
+  clearSearch();
+  activeLesson = null;
+  document.getElementById('welcomePane').classList.remove('hidden');
+  document.getElementById('videoPane').classList.add('hidden');
+  document.getElementById('topbarTitle').textContent = lang === 'zh' ? '敬拜鋼琴' : 'Like Worship';
+  clearTopbarSubtitle();
+  document.getElementById('searchInput').placeholder = lang === 'zh' ? '搜尋課堂…' : 'Search lessons…';
+  await loadData(lang);
+}
+
+function updateLangUI() {
+  document.getElementById('langEN').classList.toggle('active', currentLang === 'en');
+  document.getElementById('langZH').classList.toggle('active', currentLang === 'zh');
+}
+
+async function loadData(lang) {
+  const file = lang === 'zh' ? 'lessons-zh.json' : 'lessons.json';
+  document.getElementById('sidebarNav').innerHTML =
+    '<div style="padding:40px 0;text-align:center;color:var(--faint);font-size:12px">Loading…</div>';
+  try {
+    const res = await fetch(file + '?v=' + Date.now());
+    data = await res.json();
+  } catch(e) {
+    document.getElementById('sidebarNav').innerHTML =
+      `<div style="padding:20px;color:#c00;font-size:12px">Could not load ${file}</div>`;
+    return;
+  }
+  renderSidebar();
+  autoSelectFirstLesson();
+}
+
+function goHome() {
+  // Collapse all modules, show all difficulty groups, clear active lesson
+  openModules = {};
+  openDiffs = { Easy: true, Moderate: true, Hard: true, 'Song Tutorials': true };
+  localStorage.setItem(MODULES_KEY, JSON.stringify(openModules));
+  localStorage.setItem(DIFFS_KEY, JSON.stringify(openDiffs));
+  activeLesson = null;
+
+  // Clear iframe so video stops
+  document.getElementById('ytFrame').src = '';
+
+  // Show welcome pane
+  document.getElementById('welcomePane').classList.remove('hidden');
+  document.getElementById('videoPane').classList.add('hidden');
+  if (savedPageOpen) {
+    savedPageOpen = false;
+    document.getElementById('savedPage').classList.add('hidden');
+    document.getElementById('mainFooter').classList.remove('hidden');
+  }
+  document.getElementById('topbarTitle').textContent = currentLang === 'zh' ? '敬拜鋼琴' : 'Like Worship';
+  clearTopbarSubtitle();
+
+  renderSidebar();
+  if (window.innerWidth < 768) openMobileSidebar();
+}
+
+function autoSelectFirstLesson() {
+  // Find the first module in Easy order and select its first lesson
+  for (const diff of DIFF_ORDER) {
+    const mod = data.find(m => m.difficulty === diff && m.lessons.length > 0);
+    if (mod) {
+      // Make sure its difficulty group and module are open
+      openDiffs[diff] = true;
+      openModules[mod.id] = true;
+      localStorage.setItem(DIFFS_KEY, JSON.stringify(openDiffs));
+      localStorage.setItem(MODULES_KEY, JSON.stringify(openModules));
+      renderSidebar(); // re-render so the open state is reflected
+      selectLesson(mod, mod.lessons[0]);
+      return;
+    }
+  }
+}
+
+/* ── Sidebar render ────────────────────────────────────── */
+const DIFF_ORDER = ['Easy','Moderate','Hard','Song Tutorials'];
+const DIFF_LABEL_ZH = { Easy: '初級', Moderate: '中級', Hard: '高級', 'Song Tutorials': '詩歌示範' };
+
+function renderSidebar() {
+  const grouped = { Easy: [], Moderate: [], Hard: [], 'Song Tutorials': [] };
+  const standalone = []; // null-difficulty modules (e.g. 詩歌示範)
+  for (const m of data) {
+    if (m.difficulty == null) standalone.push(m);
+    else if (grouped[m.difficulty] !== undefined) grouped[m.difficulty].push(m);
+    else standalone.push(m);
+  }
+
+  const nav = document.getElementById('sidebarNav');
+  nav.innerHTML = '';
+
+  for (const diff of DIFF_ORDER) {
+    const modules = grouped[diff] || [];
+    if (!modules.length) continue;
+    const lessonCount = modules.reduce((s,m) => s + m.lessons.length, 0);
+
+    const grp = document.createElement('div');
+    grp.className = 'diff-group';
+
+    const isOpen = !!openDiffs[diff];
+    const dotClass = diff === 'Easy' ? 'easy'
+                   : diff === 'Moderate' ? 'moderate'
+                   : diff === 'Hard' ? 'hard'
+                   : 'song-tutorials';
+
+    grp.innerHTML = `
+      <button class="diff-header" data-diff="${diff}" aria-expanded="${isOpen}">
+        <div class="diff-header-left">
+          <span class="diff-dot ${dotClass}"></span>
+          <span class="diff-label">${currentLang === 'zh' ? DIFF_LABEL_ZH[diff] : diff}</span>
+          <span class="diff-count">${lessonCount}</span>
+        </div>
+        <svg class="diff-chevron ${isOpen ? 'open' : ''}" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="diff-modules ${isOpen ? '' : 'hidden'}" data-diff-content="${diff}"></div>
+    `;
+
+    const modulesEl = grp.querySelector('.diff-modules');
+    for (const mod of modules) {
+      modulesEl.appendChild(renderModule(mod));
+    }
+
+    grp.querySelector('.diff-header').addEventListener('click', () => toggleDiff(diff, grp));
+    nav.appendChild(grp);
+  }
+
+  // Render null-difficulty modules as top-level siblings after Hard
+  for (const mod of standalone) {
+    const grp = document.createElement('div');
+    grp.className = 'diff-group';
+
+    const isOpen = openModules[mod.id] !== false; // default open
+    const lessonCount = mod.lessons.length;
+
+    grp.innerHTML = `
+      <button class="diff-header" aria-expanded="${isOpen}">
+        <div class="diff-header-left">
+          <span class="diff-label" style="text-transform:none;letter-spacing:.03em">${escHtml(mod.title)}</span>
+          <span class="diff-count">${lessonCount}</span>
+        </div>
+        <svg class="diff-chevron ${isOpen ? 'open' : ''}" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="diff-modules ${isOpen ? '' : 'hidden'}"></div>
+    `;
+
+    const lessonsEl = grp.querySelector('.diff-modules');
+    for (const lesson of mod.lessons) {
+      const btn = document.createElement('button');
+      btn.className = 'lesson-btn' + (isActive(mod.id, lesson.id) ? ' active' : '');
+      btn.setAttribute('data-module', mod.id);
+      btn.setAttribute('data-lesson', lesson.id);
+      const vis = isVisited(mod.id, lesson.id);
+      btn.className = 'lesson-btn' + (isActive(mod.id, lesson.id) ? ' active' : '') + (vis ? ' visited' : '');
+      btn.innerHTML = `<span class="lesson-play-dot"></span>${escHtml(lesson.title)}<span class="lesson-check"></span>`;
+      btn.addEventListener('click', () => selectLesson(mod, lesson));
+      lessonsEl.appendChild(btn);
+    }
+
+    grp.querySelector('.diff-header').addEventListener('click', () => {
+      openModules[mod.id] = !openModules[mod.id];
+      localStorage.setItem(MODULES_KEY, JSON.stringify(openModules));
+      const hdr     = grp.querySelector('.diff-header');
+      const content = grp.querySelector('.diff-modules');
+      const chevron = hdr.querySelector('.diff-chevron');
+      const nowOpen = openModules[mod.id];
+      hdr.setAttribute('aria-expanded', nowOpen);
+      content.classList.toggle('hidden', !nowOpen);
+      chevron.classList.toggle('open', nowOpen);
+    });
+
+    nav.appendChild(grp);
+  }
+}
+
+function renderModule(mod) {
+  const wrap = document.createElement('div');
+  wrap.className = 'module-group';
+
+  const isOpen = !!openModules[mod.id];
+
+  const header = document.createElement('button');
+  header.className = 'module-header';
+  header.setAttribute('aria-expanded', isOpen);
+  header.innerHTML = `
+    <span class="module-title">${escHtml(mod.title)}</span>
+    <svg class="module-chevron ${isOpen ? 'open' : ''}" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  `;
+
+  const list = document.createElement('div');
+  list.className = 'lesson-list' + (isOpen ? '' : ' hidden');
+
+  for (const lesson of mod.lessons) {
+    const btn = document.createElement('button');
+    const visited = isVisited(mod.id, lesson.id);
+    btn.className = 'lesson-btn' + (isActive(mod.id, lesson.id) ? ' active' : '') + (visited ? ' visited' : '');
+    btn.setAttribute('data-module', mod.id);
+    btn.setAttribute('data-lesson', lesson.id);
+    btn.innerHTML = `<span class="lesson-play-dot"></span>${escHtml(lesson.title)}<span class="lesson-check"></span>`;
+    btn.addEventListener('click', () => selectLesson(mod, lesson));
+    list.appendChild(btn);
+  }
+
+  header.addEventListener('click', () => toggleModule(mod.id, header, list));
+  wrap.appendChild(header);
+  wrap.appendChild(list);
+  return wrap;
+}
+
+/* ── Toggle helpers ────────────────────────────────────── */
+function toggleDiff(diff, grp) {
+  openDiffs[diff] = !openDiffs[diff];
+  localStorage.setItem(DIFFS_KEY, JSON.stringify(openDiffs));
+  const btn     = grp.querySelector('.diff-header');
+  const content = grp.querySelector('.diff-modules');
+  const chevron = btn.querySelector('.diff-chevron');
+  const isOpen  = openDiffs[diff];
+  btn.setAttribute('aria-expanded', isOpen);
+  content.classList.toggle('hidden', !isOpen);
+  chevron.classList.toggle('open', isOpen);
+}
+
+function toggleModule(id, header, list) {
+  openModules[id] = !openModules[id];
+  localStorage.setItem(MODULES_KEY, JSON.stringify(openModules));
+  const isOpen = openModules[id];
+  header.setAttribute('aria-expanded', isOpen);
+  list.classList.toggle('hidden', !isOpen);
+  header.querySelector('.module-chevron').classList.toggle('open', isOpen);
+}
+
+/* ── Lesson selection ──────────────────────────────────── */
+function selectLesson(mod, lesson) {
+  activeLesson = { moduleId: mod.id, lessonId: lesson.id };
+
+  // Update active class in sidebar
+  document.querySelectorAll('.lesson-btn').forEach(b => {
+    b.classList.toggle('active',
+      b.dataset.module === mod.id && b.dataset.lesson === lesson.id);
+  });
+
+  // Update topbar
+  document.getElementById('topbarTitle').textContent = lesson.title;
+  setTopbarSubtitle(mod.difficulty, mod.title);
+
+  // Hide saved page if open
+  if (savedPageOpen) {
+    savedPageOpen = false;
+    document.getElementById('savedPage').classList.add('hidden');
+    document.getElementById('mainFooter').classList.remove('hidden');
+  }
+
+  // Show video pane
+  document.getElementById('welcomePane').classList.add('hidden');
+  const vp = document.getElementById('videoPane');
+  vp.classList.remove('hidden');
+
+  // Set iframe src
+  document.getElementById('ytFrame').src =
+    `https://www.youtube.com/embed/${lesson.youtubeId}?rel=0&modestbranding=1`;
+
+  // Meta
+  document.getElementById('videoTitle').textContent = lesson.title;
+  document.getElementById('videoDesc').textContent = lesson.description;
+
+  const badge = document.getElementById('videoBadge');
+  if (mod.difficulty) {
+    badge.textContent = currentLang === 'zh' ? (DIFF_LABEL_ZH[mod.difficulty] || mod.difficulty) : mod.difficulty;
+    badge.className = 'video-badge badge-' + mod.difficulty.toLowerCase().replace(/\s+/g, '-');
+    badge.style.display = '';
+  } else {
+    badge.textContent = '';
+    badge.className = 'video-badge';
+    badge.style.display = 'none';
+  }
+
+  // Channel name
+  const channelEl = document.getElementById('videoChannelName');
+  channelEl.textContent = lesson.channelName || '';
+  document.getElementById('videoChannel').style.display = lesson.channelName ? 'inline-flex' : 'none';
+
+  document.getElementById('videoChannel').href = `https://www.youtube.com/watch?v=${lesson.youtubeId}`;
+
+  // Mark lesson visited
+  markVisited(mod.id, lesson.id);
+  document.querySelectorAll('.lesson-btn').forEach(b => {
+    if (b.dataset.module === mod.id && b.dataset.lesson === lesson.id) {
+      b.classList.add('visited');
+    }
+  });
+
+  // Update star button
+  updateStarBtn(lesson.youtubeId);
+
+  // On mobile, close sidebar after selecting
+  if (window.innerWidth < 768) closeSidebar();
+
+  // Refresh search result active states if search is open
+  if (searchQuery) renderSearchResults(searchQuery);
+}
+
+function isActive(moduleId, lessonId) {
+  return activeLesson?.moduleId === moduleId && activeLesson?.lessonId === lessonId;
+}
+
+/* ── Sidebar open/close ────────────────────────────────── */
+function toggleSidebar() {
+  if (window.innerWidth < 768) {
+    const sidebar = document.getElementById('sidebar');
+    const isOpen = sidebar.classList.contains('mobile-open');
+    if (isOpen) closeSidebar(); else openMobileSidebar();
+  } else {
+    sidebarCollapsed = !sidebarCollapsed;
+    document.getElementById('sidebar').classList.toggle('collapsed', sidebarCollapsed);
+  }
+}
+
+function openMobileSidebar() {
+  document.getElementById('sidebar').classList.add('mobile-open');
+  document.getElementById('backdrop').classList.add('open');
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('mobile-open');
+  document.getElementById('backdrop').classList.remove('open');
+}
+
+/* ── Theme ─────────────────────────────────────────────── */
+function applyTheme(theme, save = true) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (save) localStorage.setItem(THEME_KEY, theme);
+  document.querySelectorAll('.theme-option').forEach(el => {
+    el.classList.toggle('active', el.dataset.t === theme);
+  });
+}
+
+function setTheme(theme) { applyTheme(theme); }
+
+function openSettings() {
+  document.getElementById('settingsModal').classList.add('open');
+  const saved = localStorage.getItem(THEME_KEY) || 'blue';
+  document.querySelectorAll('.theme-option').forEach(el => {
+    el.classList.toggle('active', el.dataset.t === saved);
+  });
+  // Show version derived from last modified date (updates on each Cloudflare deploy)
+  const d = new Date(document.lastModified);
+  const y  = d.getFullYear();
+  const mo = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  const hh = String(d.getHours()).padStart(2, '0');
+  const mm = String(d.getMinutes()).padStart(2, '0');
+  document.getElementById('appVersion').textContent = `v${y}${mo}${dd}-${hh}${mm}`;
+}
+
+function closeSettings() {
+  document.getElementById('settingsModal').classList.remove('open');
+}
+
+document.getElementById('settingsModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSettings();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('installModal').classList.contains('open')) closeInstallHelp();
+    else if (document.getElementById('helpModal').classList.contains('open')) closeHelp();
+    else if (savedPageOpen) closeBookmarks();
+    else if (document.getElementById('settingsModal').classList.contains('open')) closeSettings();
+    else if (searchQuery) clearSearch();
+    else if (window.innerWidth < 768) closeSidebar();
+  }
+});
+
+/* ── Search ─────────────────────────────────────────────── */
+let searchQuery = '';
+
+function onSearch(q) {
+  searchQuery = q.trim();
+  const clearBtn = document.getElementById('searchClear');
+  const nav      = document.getElementById('sidebarNav');
+  const results  = document.getElementById('searchResults');
+
+  if (!searchQuery) {
+    clearSearch();
+    return;
+  }
+
+  clearBtn.classList.remove('hidden');
+  nav.classList.add('hidden');
+  results.classList.remove('hidden');
+  renderSearchResults(searchQuery);
+}
+
+function clearSearch() {
+  searchQuery = '';
+  const input    = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('searchClear');
+  const nav      = document.getElementById('sidebarNav');
+  const results  = document.getElementById('searchResults');
+
+  input.value = '';
+  clearBtn.classList.add('hidden');
+  results.classList.add('hidden');
+  nav.classList.remove('hidden');
+}
+
+function renderSearchResults(q) {
+  const results = document.getElementById('searchResults');
+  const lower   = q.toLowerCase();
+  const hits    = [];
+
+  for (const mod of data) {
+    for (const lesson of mod.lessons) {
+      if (
+        lesson.title.toLowerCase().includes(lower) ||
+        lesson.description.toLowerCase().includes(lower) ||
+        mod.title.toLowerCase().includes(lower) ||
+        (lesson.channelName || '').toLowerCase().includes(lower)
+      ) {
+        hits.push({ mod, lesson });
+      }
+    }
+  }
+
+  if (!hits.length) {
+    results.innerHTML = `<div class="search-no-results">No lessons match<br><strong>${escHtml(q)}</strong></div>`;
+    return;
+  }
+
+  results.innerHTML = hits.map(({ mod, lesson }) => {
+    const isAct = isActive(mod.id, lesson.id);
+    const highlighted = highlightMatch(lesson.title, q);
+    const channelHighlighted = lesson.channelName
+      ? highlightMatch(lesson.channelName, q)
+      : '';
+    return `<button
+      class="search-result-item${isAct ? ' active' : ''}"
+      data-module="${mod.id}"
+      data-lesson="${lesson.id}"
+    >
+      <span class="sri-title">${highlighted}</span>
+      <span class="sri-meta">${escHtml(mod.title)}${channelHighlighted ? ' · ' + channelHighlighted : ''}</span>
+    </button>`;
+  }).join('');
+
+  results.querySelectorAll('.search-result-item').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mod    = data.find(m => m.id === btn.dataset.module);
+      const lesson = mod?.lessons.find(l => l.id === btn.dataset.lesson);
+      if (mod && lesson) selectLesson(mod, lesson);
+      results.querySelectorAll('.search-result-item').forEach(b =>
+        b.classList.toggle('active', b === btn));
+    });
+  });
+}
+
+function highlightMatch(text, q) {
+  const idx = text.toLowerCase().indexOf(q.toLowerCase());
+  if (idx === -1) return escHtml(text);
+  return escHtml(text.slice(0, idx))
+    + '<mark>' + escHtml(text.slice(idx, idx + q.length)) + '</mark>'
+    + escHtml(text.slice(idx + q.length));
+}
+
+/* ── Visited history ───────────────────────────────────── */
+function getVisited() {
+  try { return JSON.parse(localStorage.getItem(VISITED_KEY) || '{}'); } catch(e) { return {}; }
+}
+function markVisited(moduleId, lessonId) {
+  const v = getVisited();
+  v[moduleId + '|' + lessonId] = true;
+  localStorage.setItem(VISITED_KEY, JSON.stringify(v));
+}
+function isVisited(moduleId, lessonId) {
+  return !!getVisited()[moduleId + '|' + lessonId];
+}
+function clearVisited() {
+  localStorage.removeItem(VISITED_KEY);
+  document.querySelectorAll('.lesson-btn').forEach(btn => btn.classList.remove('visited'));
+}
+function clearVisitedConfirm() {
+  clearVisited();
+}
+
+/* ── Bookmarks ─────────────────────────────────────────── */
+function getBookmarks() {
+  try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch(e) { return []; }
+}
+function saveBookmarks(arr) {
+  localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(arr));
+  updateBookmarksBadge();
+}
+
+function isBookmarked(youtubeId) {
+  return getBookmarks().some(b => b.youtubeId === youtubeId);
+}
+
+function toggleStar() {
+  if (!activeLesson) return;
+  const mod    = data.find(m => m.id === activeLesson.moduleId);
+  const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
+  if (!mod || !lesson) return;
+
+  let bookmarks = getBookmarks();
+  const idx = bookmarks.findIndex(b => b.youtubeId === lesson.youtubeId);
+  if (idx >= 0) {
+    bookmarks.splice(idx, 1);
+  } else {
+    bookmarks.push({
+      youtubeId:   lesson.youtubeId,
+      title:       lesson.title,
+      description: lesson.description,
+      channelName: lesson.channelName || '',
+      difficulty:  mod.difficulty,
+      moduleTitle: mod.title,
+      moduleId:    mod.id,
+      lessonId:    lesson.id
+    });
+  }
+  saveBookmarks(bookmarks);
+  updateStarBtn(lesson.youtubeId);
+}
+
+function updateStarBtn(youtubeId) {
+  const btn = document.getElementById('starBtn');
+  if (!btn) return;
+  const starred = isBookmarked(youtubeId);
+  btn.classList.toggle('starred', starred);
+  btn.title = starred ? 'Remove bookmark' : 'Save for later';
+  btn.setAttribute('aria-label', starred ? 'Remove bookmark' : 'Save lesson');
+}
+
+function updateBookmarksBadge() {
+  const badge = document.getElementById('bookmarksBadge');
+  if (!badge) return;
+  const count = getBookmarks().length;
+  badge.classList.toggle('has-items', count > 0);
+}
+
+function toggleBookmarks() {
+  if (savedPageOpen) closeBookmarks(); else openBookmarks();
+}
+
+function openBookmarks() {
+  savedPageOpen = true;
+  renderSavedPage();
+  document.getElementById('welcomePane').classList.add('hidden');
+  document.getElementById('videoPane').classList.add('hidden');
+  document.getElementById('savedPage').classList.remove('hidden');
+  document.getElementById('mainFooter').classList.add('hidden');
+  document.getElementById('topbarTitle').textContent = currentLang === 'zh' ? '已儲存課堂' : 'Saved Lessons';
+  clearTopbarSubtitle();
+  // update hamburger btn aria
+  if (window.innerWidth < 768) closeSidebar();
+}
+
+function closeBookmarks() {
+  savedPageOpen = false;
+  document.getElementById('savedPage').classList.add('hidden');
+  document.getElementById('mainFooter').classList.remove('hidden');
+  // Restore previous title
+  if (activeLesson) {
+    const mod    = data.find(m => m.id === activeLesson.moduleId);
+    const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
+    if (lesson) {
+      document.getElementById('topbarTitle').textContent = lesson.title;
+      document.getElementById('welcomePane').classList.add('hidden');
+      document.getElementById('videoPane').classList.remove('hidden');
+      return;
+    }
+  }
+  document.getElementById('welcomePane').classList.remove('hidden');
+  document.getElementById('topbarTitle').textContent = currentLang === 'zh' ? '敬拜鋼琴' : 'Like Worship';
+  clearTopbarSubtitle();
+}
+
+function clearAllBookmarks() {
+  if (!getBookmarks().length) return;
+  saveBookmarks([]);
+  if (savedPageOpen) renderSavedPage();
+  if (activeLesson) {
+    const mod    = data.find(m => m.id === activeLesson.moduleId);
+    const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
+    if (lesson) updateStarBtn(lesson.youtubeId);
+  }
+}
+
+function removeBookmark(youtubeId, e) {
+  e.stopPropagation();
+  const bookmarks = getBookmarks().filter(b => b.youtubeId !== youtubeId);
+  saveBookmarks(bookmarks);
+  if (savedPageOpen) renderSavedPage();
+  if (activeLesson) {
+    const mod    = data.find(m => m.id === activeLesson.moduleId);
+    const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
+    if (lesson && lesson.youtubeId === youtubeId) updateStarBtn(youtubeId);
+  }
+}
+
+function renderSavedPage() {
+  const grid = document.getElementById('savedGrid');
+  const sub  = document.getElementById('savedPageSub');
+  const bookmarks = getBookmarks();
+
+  sub.textContent = bookmarks.length === 1 ? '1 lesson saved' : `${bookmarks.length} lessons saved`;
+
+  if (!bookmarks.length) {
+    grid.innerHTML = `<div class="saved-empty">
+      <svg width="52" height="52" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      No saved lessons yet.<br>Tap the <svg width="15" height="15" fill="#f5a623" stroke="#f5a623" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="display:inline-block;vertical-align:-3px;margin:0 2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> <strong style="color:var(--ink)">star</strong> next to any lesson title to save it here.
+    </div>`;
+    return;
+  }
+
+  grid.innerHTML = bookmarks.map(b => `
+    <div class="saved-card" onclick="openSavedLesson('${b.moduleId}','${b.lessonId}')">
+      <div class="saved-card-thumb-wrap">
+        <img class="saved-card-thumb" src="https://img.youtube.com/vi/${b.youtubeId}/mqdefault.jpg" alt="${escHtml(b.title)}" loading="lazy" />
+        <div class="saved-card-play">
+          <div class="saved-card-play-icon">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <button class="saved-card-remove" onclick="removeBookmark('${b.youtubeId}', event)" aria-label="Remove">×</button>
+      </div>
+      <div class="saved-card-body">
+        <div class="saved-card-title">${escHtml(b.title)}</div>
+        <div class="saved-card-meta">${b.difficulty ? escHtml(b.difficulty) + ' · ' : ''}${escHtml(b.moduleTitle)}${b.channelName ? ' · ' + escHtml(b.channelName) : ''}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openSavedLesson(moduleId, lessonId) {
+  const mod    = data.find(m => m.id === moduleId);
+  const lesson = mod?.lessons.find(l => l.id === lessonId);
+  if (mod && lesson) {
+    closeBookmarks();
+    selectLesson(mod, lesson);
+  }
+}
+
+/* ── Help modal ────────────────────────────────────────── */
+function openHelp() {
+  const w = window.innerWidth;
+  const isMobile = w < 768;
+  const isTablet = w >= 768 && w < 1200;
+  const isDesktop = w >= 1200;
+
+  const touchSection = `
+    <p class="help-section-title">👆 Touch Gestures</p>
+    <div class="help-row">
+      <span class="help-gesture-icon">👆👆</span>
+      <span class="help-desc">Double-tap the <strong>right</strong> side of the video to skip forward 10 sec</span>
+    </div>
+    <div class="help-row">
+      <span class="help-gesture-icon">👆👆</span>
+      <span class="help-desc">Double-tap the <strong>left</strong> side of the video to rewind 10 sec</span>
+    </div>
+    <div class="help-row">
+      <span class="help-gesture-icon">👆</span>
+      <span class="help-desc">Tap once to show the progress bar, then drag to any point</span>
+    </div>`;
+
+  const keyboardSection = `
+    <p class="help-section-title">⌨️ Keyboard Shortcuts</p>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">←</span><span class="help-key">→</span></div>
+      <span class="help-desc">Rewind / skip forward 5 seconds</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">J</span><span class="help-key">L</span></div>
+      <span class="help-desc">Rewind / skip forward 10 seconds</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">K</span></div>
+      <span class="help-desc">Pause / play</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">Space</span></div>
+      <span class="help-desc">Pause / play</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">M</span></div>
+      <span class="help-desc">Mute / unmute</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">↑</span><span class="help-key">↓</span></div>
+      <span class="help-desc">Volume up / down</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">F</span></div>
+      <span class="help-desc">Toggle fullscreen</span>
+    </div>
+    <div class="help-row">
+      <div class="help-keys"><span class="help-key">0</span>–<span class="help-key">9</span></div>
+      <span class="help-desc">Jump to 0%–90% of the video</span>
+    </div>`;
+
+  const tabletNote = `<p style="margin-top:14px;font-size:12px;color:var(--muted);line-height:1.6;">
+    💡 Keyboard shortcuts work if you have a physical keyboard connected (e.g. iPad with keyboard case or Mac). Click inside the video first to focus it.
+  </p>`;
+
+  let body = '';
+  if (isMobile) {
+    body = touchSection;
+  } else if (isTablet) {
+    body = touchSection + keyboardSection + tabletNote;
+  } else {
+    body = keyboardSection;
+  }
+
+  document.getElementById('helpModalBody').innerHTML = body;
+  document.getElementById('helpModal').classList.add('open');
+}
+
+function closeHelp() {
+  document.getElementById('helpModal').classList.remove('open');
+}
+
+function openInstallHelp() {
+  const zh = currentLang === 'zh';
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isIPad = /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const title = document.getElementById('installModalTitle');
+  title.textContent = zh ? '加到主畫面' : 'Add to Home Screen';
+  const shareIcon = '<svg class="share-inline" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 16V4"/><polyline points="7 9 12 4 17 9"/><path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>';
+
+  let steps;
+  if (isIOS) {
+    steps = zh
+      ? [
+          '用 <strong>Safari</strong> 打開這個網頁（不是 Chrome）。',
+          isIPad
+            ? '點 Safari 工具列上的 <strong>分享</strong> ' + shareIcon + ' 按鈕。'
+            : '點畫面底部的 <strong>分享</strong> ' + shareIcon + ' 按鈕。',
+          '向下滑，點 <strong>加入主畫面</strong>。',
+          '點右上角 <strong>加入</strong>。之後主畫面會出現 Like Worship 圖示。'
+        ]
+      : [
+          'Open this page in <strong>Safari</strong> (not Chrome).',
+          isIPad
+            ? 'Tap the <strong>Share</strong> ' + shareIcon + ' button in the Safari toolbar.'
+            : 'Tap the <strong>Share</strong> ' + shareIcon + ' button at the bottom of the screen.',
+          'Scroll down and tap <strong>Add to Home Screen</strong>.',
+          'Tap <strong>Add</strong> in the top right. Like Worship will show as an icon on your Home Screen.'
+        ];
+  } else {
+    steps = zh
+      ? [
+          '在 iPhone 或 iPad 上用 <strong>Safari</strong> 打開這個網站。',
+          '點 <strong>分享</strong> ' + shareIcon + '。',
+          '點 <strong>加入主畫面</strong>，再點 <strong>加入</strong>。'
+        ]
+      : [
+          'On your iPhone or iPad, open this site in <strong>Safari</strong>.',
+          'Tap <strong>Share</strong> ' + shareIcon + '.',
+          'Tap <strong>Add to Home Screen</strong>, then tap <strong>Add</strong>.'
+        ];
+  }
+
+  const note = zh
+    ? '之後從主畫面打開，會像 App 一樣全螢幕使用。'
+    : 'Next time, tap the icon on your Home Screen. It opens full screen, like an app.';
+
+  document.getElementById('installModalBody').innerHTML =
+    '<div class="install-steps">' +
+    steps.map((s, i) =>
+      `<div class="install-step"><span class="install-num">${i + 1}</span><p>${s}</p></div>`
+    ).join('') +
+    '</div><p class="install-note">' + note + '</p>';
+
+  document.getElementById('installModal').classList.add('open');
+}
+
+function closeInstallHelp() {
+  document.getElementById('installModal').classList.remove('open');
+}
+
+document.getElementById('installModal').addEventListener('click', function(e) {
+  if (e.target === this) closeInstallHelp();
+});
+
+document.getElementById('helpModal').addEventListener('click', function(e) {
+  if (e.target === this) closeHelp();
+});
+
+/* ── Topbar subtitle ───────────────────────────────────── */
+function setTopbarSubtitle(difficulty, moduleTitle) {
+  const el = document.getElementById('topbarSubtitle');
+  const dotClass = difficulty === 'Easy' ? 'dot-easy'
+                 : difficulty === 'Moderate' ? 'dot-moderate'
+                 : difficulty === 'Hard' ? 'dot-hard'
+                 : 'dot-song-tutorials';
+  el.innerHTML = `<span class="topbar-subtitle-dot ${dotClass}"></span>${escHtml(difficulty)} · ${escHtml(moduleTitle)}`;
+  el.classList.add('visible');
+}
+function clearTopbarSubtitle() {
+  const el = document.getElementById('topbarSubtitle');
+  el.textContent = '';
+  el.classList.remove('visible');
+}
+
+/* ── Utility ───────────────────────────────────────────── */
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>

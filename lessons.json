@@ -1,0 +1,1036 @@
+[
+  {
+    "id": "module-1",
+    "title": "Worship Piano Fundamentals",
+    "description": "Build your foundation: notes, steps, scales, finger placement, and the number system — from Worship Piano Academy.",
+    "difficulty": "Easy",
+    "sortOrder": 0,
+    "lessons": [
+      {
+        "id": "lesson-1",
+        "title": "Lesson 1 — Notes",
+        "description": "Learn the notes on the piano keyboard — the absolute starting point for every worship pianist.",
+        "youtubeId": "1BQHNhbqHbI",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-2",
+        "title": "Lesson 2 — Steps",
+        "description": "Understand whole steps and half steps — the building blocks of all scales and chords.",
+        "youtubeId": "boI_rOCM9oE",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-3",
+        "title": "Lesson 3 — Scales",
+        "description": "Master major scales and understand how they form the foundation of worship piano playing.",
+        "youtubeId": "SuGHjnR8M7s",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-4",
+        "title": "Lesson 4 — Finger Placement",
+        "description": "Learn proper finger placement and technique to play smoothly across the keyboard.",
+        "youtubeId": "0NWEaFmix5s",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-5",
+        "title": "Lesson 5 — Number System",
+        "description": "Unlock the Nashville Number System — the universal language for playing worship songs in any key.",
+        "youtubeId": "blSwr8xp7Q8",
+        "sortOrder": 4,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-twk-2",
+        "title": "What is the Nashville Number System? — Deep Dive",
+        "description": "Carson Bruce breaks down the Nashville Number System from the ground up — where it came from, how it works, and how to apply it confidently in any worship setting.",
+        "youtubeId": "03OxlCHUNuk",
+        "sortOrder": 5,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-1",
+        "title": "Classical vs. Contemporary Worship Piano — The Mindset Shift",
+        "description": "A candid conversation about the biggest mental switch a classically trained pianist must make to thrive in a worship band — moving from rigid sheet music to chord charts, creative flexibility, and playing with a band.",
+        "youtubeId": "MIHE9yvbNWM",
+        "sortOrder": 6,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-91",
+        "title": "Can a Classical Pianist Thrive in Modern Worship?",
+        "description": "Sunday Sounds explores whether a classical piano background helps or hinders modern worship playing — and how to bridge the gap.",
+        "youtubeId": "MIHE9yvbNWM",
+        "sortOrder": 7,
+        "channelName": "Sunday Sounds"
+      }
+    ]
+  },
+  {
+    "id": "module-2",
+    "title": "Chords, Inversions & Songs",
+    "description": "Build chords, play your first worship song, and master inversions, sus chords, and slash chords.",
+    "difficulty": "Easy",
+    "sortOrder": 1,
+    "lessons": [
+      {
+        "id": "lesson-6",
+        "title": "Lesson 6 — Chords",
+        "description": "Learn how to build chords from scales — the essential skill for playing worship piano.",
+        "youtubeId": "3CUp8xpKQmM",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-7",
+        "title": "Lesson 7 — Playing a Song",
+        "description": "Put it all together — play your first complete worship song using the chords you have learned.",
+        "youtubeId": "ceS3OInhrPE",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-8",
+        "title": "Lesson 8 — Inversions",
+        "description": "Master chord inversions for smooth transitions between chords — essential for flowing worship playing.",
+        "youtubeId": "Az1H64SuFoo",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-9",
+        "title": "Lesson 9 — Sus Chords",
+        "description": "Learn suspended chords and how they create the distinctive sound of modern worship piano.",
+        "youtubeId": "-0uRHUOZ2zo",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-10",
+        "title": "Lesson 10 — Slash Chords",
+        "description": "Master slash chords — playing different bass notes under chords for richer, more professional sound.",
+        "youtubeId": "lmo5TfWuccc",
+        "sortOrder": 4,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-dg-1",
+        "title": "Play in ALL 12 Keys in 3 Easy Steps",
+        "description": "A simple 3-step method to transpose any worship song into all 12 keys — great for beginners who want to play with any band or singer.",
+        "youtubeId": "8Lw_agveBNo",
+        "sortOrder": 5,
+        "channelName": "David Green"
+      }
+    ]
+  },
+  {
+    "id": "module-3",
+    "title": "Chord Progressions",
+    "description": "Learn essential worship chord progressions and how they connect songs together beautifully.",
+    "difficulty": "Easy",
+    "sortOrder": 2,
+    "lessons": [
+      {
+        "id": "lesson-11",
+        "title": "Lesson 11 — Chord Progression 1",
+        "description": "Learn your first essential worship chord progression — the foundation of countless worship songs.",
+        "youtubeId": "iGeIbdNX48E",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-12",
+        "title": "Lesson 12 — Chord Progression 2",
+        "description": "Add a second essential progression to your toolkit — expand your worship playing vocabulary.",
+        "youtubeId": "DeHX13kIkkI",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-13",
+        "title": "Lesson 13 — Chord Progression 3",
+        "description": "Master a third core progression that opens up even more worship songs.",
+        "youtubeId": "XDBQhzqqdPY",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-14",
+        "title": "Lesson 14 — Chord Progression 4",
+        "description": "Complete your progression toolkit with this final essential worship chord pattern.",
+        "youtubeId": "TMFHS9WTI1c",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-twk-3",
+        "title": "Music Theory Tips — Circle of Fifths & Passing Chord Shortcuts",
+        "description": "Curt Buell teaches the 7-3-6-2-5-1-4 circle pattern, how to use it for passing chords and turnarounds, and why it's the foundation of every jazz, gospel, and worship chord movement.",
+        "youtubeId": "_VU2gM3X4a0",
+        "sortOrder": 4,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-4",
+        "title": "How to Use the Circle of 5ths in Worship",
+        "description": "A focused lesson applying the circle of fifths directly to worship piano — understanding key relationships, chord movement, and how to use it in a real Sunday setting.",
+        "youtubeId": "JCAYJOZP83k",
+        "sortOrder": 5,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-5",
+        "title": "5 Chord Progressions Every Worship Keys Player Should Know",
+        "description": "Alex Smith demonstrates five must-know worship progressions — 5-6-4-1, 4-1-5-6, and more — with embellishments, inversions, and how to use each behind a pastor or in a live set.",
+        "youtubeId": "COymFPDe98k",
+        "sortOrder": 6,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-6",
+        "title": "Minor Progressions in Worship",
+        "description": "Spooky Scott from Red Rocks Worship shows how minor chord progressions add emotion and depth to worship — moving well beyond the typical major-key sound most pianists default to.",
+        "youtubeId": "6xqrU2uvaW0",
+        "sortOrder": 7,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  },
+  {
+    "id": "module-4",
+    "title": "Worship Rhythm Patterns — 3 Note",
+    "description": "Master essential 3-note rhythm patterns that make worship piano come alive — from Worship Piano Academy.",
+    "difficulty": "Easy",
+    "sortOrder": 3,
+    "lessons": [
+      {
+        "id": "lesson-15",
+        "title": "3 Notes — Progression 1",
+        "description": "5 must-know rhythm patterns over a 3-note chord progression — your first patterns for worship piano.",
+        "youtubeId": "ScpUG0dGhao",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-16",
+        "title": "3 Notes — Progression 2",
+        "description": "5 more rhythm patterns to expand your 3-note chord vocabulary for worship playing.",
+        "youtubeId": "SoqzhcMxeTg",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-17",
+        "title": "3 Notes — Progression 3",
+        "description": "Add these 5 rhythm patterns to your toolkit — essential for creating movement in worship songs.",
+        "youtubeId": "IOaNKP58K2A",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-18",
+        "title": "3 Notes — Progression 4",
+        "description": "5 more patterns — build your rhythmic confidence over 3-note chord progressions.",
+        "youtubeId": "H7sMXK8i1tk",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-19",
+        "title": "3 Notes — Progression 5",
+        "description": "Complete your 3-note rhythm pattern set — 5 final patterns for worship piano.",
+        "youtubeId": "i83gr9aaxN8",
+        "sortOrder": 4,
+        "channelName": "Worship Piano Academy"
+      }
+    ]
+  },
+  {
+    "id": "module-5",
+    "title": "Worship Rhythm Patterns — 4 & 5 Note",
+    "description": "Level up with 4 and 5-note rhythm patterns for richer, fuller worship piano playing.",
+    "difficulty": "Easy",
+    "sortOrder": 4,
+    "lessons": [
+      {
+        "id": "lesson-20",
+        "title": "4 Notes — Progression 1",
+        "description": "Start expanding to 4-note chords — 5 essential rhythm patterns for fuller worship sound.",
+        "youtubeId": "hAgUup0tKzg",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-21",
+        "title": "4 Notes — Progression 2",
+        "description": "5 more 4-note patterns to diversify your worship piano rhythm vocabulary.",
+        "youtubeId": "M_dwR0URAZA",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-22",
+        "title": "4 Notes — Progression 3",
+        "description": "Continue building your 4-note rhythm arsenal — 5 patterns that sound great in any worship set.",
+        "youtubeId": "Kd8WlPvGqNc",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-23",
+        "title": "4 Notes — Progression 4",
+        "description": "Add 5 more 4-note rhythm patterns — keep building your worship piano versatility.",
+        "youtubeId": "FsH5bypqW_A",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-24",
+        "title": "4 Notes — Progression 5",
+        "description": "Complete your 4-note rhythm pattern collection with these 5 final patterns.",
+        "youtubeId": "6W7qFGzCorA",
+        "sortOrder": 4,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-25",
+        "title": "5 Notes — Progression 1",
+        "description": "Step up to 5-note chord patterns — the rich, full sound of professional worship piano.",
+        "youtubeId": "nnLpNnJRkzY",
+        "sortOrder": 5,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-26",
+        "title": "5 Notes — Progression 2",
+        "description": "5 more 5-note rhythm patterns to make your worship playing sound polished and dynamic.",
+        "youtubeId": "95t6mtpqAb8",
+        "sortOrder": 6,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-27",
+        "title": "5 Notes — Progression 3",
+        "description": "Master 5 more 5-note patterns — essential for creating movement in worship sets.",
+        "youtubeId": "WHkfXYEsMKM",
+        "sortOrder": 7,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-28",
+        "title": "5 Notes — Progression 4",
+        "description": "Continue expanding your 5-note vocabulary — 5 patterns every worship pianist should know.",
+        "youtubeId": "_t7A5nNtoVw",
+        "sortOrder": 8,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-29",
+        "title": "5 Notes — Progression 5",
+        "description": "Complete your 5-note rhythm pattern toolkit — all 15 patterns learned across 3 levels.",
+        "youtubeId": "adDHerJ0vdU",
+        "sortOrder": 9,
+        "channelName": "Worship Piano Academy"
+      }
+    ]
+  },
+  {
+    "id": "module-6",
+    "title": "Worship Song Tutorials",
+    "description": "Learn to play popular worship songs step by step — apply your rhythm patterns to real music.",
+    "difficulty": "Song Tutorials",
+    "sortOrder": 5,
+    "lessons": [
+      {
+        "id": "lesson-37",
+        "title": "Do It Again — Elevation Worship",
+        "description": "Learn Do It Again — complete piano tutorial for this faith-building worship anthem.",
+        "youtubeId": "Yk5HFqkUDmY",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-31",
+        "title": "Goodness of God — Bethel Music",
+        "description": "Play Goodness of God — complete piano tutorial with sheet music for this worship anthem.",
+        "youtubeId": "k_63w-nyFlw",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-38",
+        "title": "Graves into Gardens — Elevation Worship",
+        "description": "Master Graves into Gardens — piano tutorial with sheet music for this popular worship song.",
+        "youtubeId": "3ZBHEQwvHxI",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-32",
+        "title": "Great Are You Lord — All Sons & Daughters",
+        "description": "Master Great Are You Lord — piano tutorial for a song used in churches worldwide.",
+        "youtubeId": "oLB-T_qkN_w",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-33",
+        "title": "Here I Am to Worship — Tim Hughes / Hillsong",
+        "description": "Learn Here I Am to Worship — a timeless worship classic, arranged for piano.",
+        "youtubeId": "41yg5krvwxA",
+        "sortOrder": 4,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-44",
+        "title": "Holy Forever — Bethel Music",
+        "description": "Full piano tutorial and playthrough for Holy Forever by Bethel Music.",
+        "youtubeId": "NlfRt2bNOO4",
+        "startTime": 774,
+        "sortOrder": 5,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-36",
+        "title": "It Is Well — Kristene DiMarco / Bethel",
+        "description": "Play It Is Well — a powerful worship ballad, with full piano tutorial and sheet music.",
+        "youtubeId": "VcGb2sFCIqw",
+        "sortOrder": 6,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-41",
+        "title": "Lord I Need You — Gospel Chords & Ending",
+        "description": "Add gospel-style chords and a beautiful ending to Lord I Need You — pro tips inside.",
+        "youtubeId": "mTCZHjaEjMU",
+        "sortOrder": 7,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-34",
+        "title": "Reckless Love — Cory Asbury",
+        "description": "Play Reckless Love with full piano tutorial + sheet music — a modern worship staple.",
+        "youtubeId": "zvNasjmwM2o",
+        "sortOrder": 8,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-42",
+        "title": "Reckless Love — Israel Houghton Style",
+        "description": "Play Reckless Love in the style of Israel Houghton — gospel-influenced arrangement.",
+        "youtubeId": "cOBAWJjDD_g",
+        "sortOrder": 9,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-35",
+        "title": "See A Victory — Elevation Worship",
+        "description": "Learn See A Victory with piano tutorial + sheet music — an uplifting worship anthem.",
+        "youtubeId": "gacDOtFvHFM",
+        "sortOrder": 10,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-43",
+        "title": "Sound of Freedom — Piano Tutorial",
+        "description": "Learn Sound of Freedom — a powerful worship piano cover and tutorial.",
+        "youtubeId": "cKICKVJCGA0",
+        "sortOrder": 11,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-30",
+        "title": "Way Maker — Leeland / Sinach",
+        "description": "Learn Way Maker with full piano tutorial + sheet music — one of the most beloved worship songs.",
+        "youtubeId": "cq4tIHMN6zE",
+        "sortOrder": 12,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-90",
+        "title": "What a Beautiful Name — Hillsong Worship",
+        "description": "Full piano tutorial and playthrough for What a Beautiful Name by Hillsong Worship.",
+        "youtubeId": "2y6giRC5DI0",
+        "sortOrder": 13,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-39",
+        "title": "Won't Stop Now — Elevation Worship",
+        "description": "Play Won't Stop Now — upbeat worship piano tutorial with full sheet music.",
+        "youtubeId": "fHGwjgxJxC8",
+        "sortOrder": 14,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-40",
+        "title": "You Deserve It All — Worship Piano Tutorial",
+        "description": "Learn You Deserve It All — a beautiful worship song arranged for piano.",
+        "youtubeId": "nv7hs0JugUk",
+        "sortOrder": 15,
+        "channelName": "Worship Piano Academy"
+      }
+    ]
+  },
+  {
+    "id": "module-7",
+    "title": "Piano Techniques & Riffs",
+    "description": "Pro-level techniques: smooth transitions, dynamics, and signature worship piano riffs.",
+    "difficulty": "Moderate",
+    "sortOrder": 6,
+    "lessons": [
+      {
+        "id": "lesson-44",
+        "title": "Smooth Chord Transitions with Shared Notes",
+        "description": "Learn the secret to seamless chord changes — use shared notes for professional-sounding transitions.",
+        "youtubeId": "f0YSwVds2LY",
+        "sortOrder": 0,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-45",
+        "title": "Easy Way to Learn Worship Songs",
+        "description": "Break down any worship song quickly — a proven method for beginner pianists.",
+        "youtubeId": "r-a4klpY28k",
+        "sortOrder": 1,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-46",
+        "title": "The Perfect Piano Riff for Smooth Transitions",
+        "description": "One riff that works in 4 different worship songs — add instant polish to your playing.",
+        "youtubeId": "UcxsaGOYPRk",
+        "sortOrder": 2,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-47",
+        "title": "Build Dynamics on a 1 Chord",
+        "description": "Use this simple rhythm pattern to create dynamics and energy on a single chord.",
+        "youtubeId": "G6lHqnSsiNY",
+        "sortOrder": 3,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-48",
+        "title": "How to Play the Melody in Worship Songs",
+        "description": "Learn to find and play the melody line of any worship song — a game-changer for beginners.",
+        "youtubeId": "gg0X8jzynyg",
+        "sortOrder": 4,
+        "channelName": "Adoration Music Academy"
+      },
+      {
+        "id": "lesson-49",
+        "title": "Add2 & Sus Chords for Worship Piano",
+        "description": "Master the essential add2 and suspended chord voicings that define modern worship piano.",
+        "youtubeId": "-VFU_hlqrVc",
+        "sortOrder": 5,
+        "channelName": "Worship Music Academy"
+      },
+      {
+        "id": "lesson-50",
+        "title": "Learn 4 Chords — Play 100s of Worship Songs",
+        "description": "Unlock hundreds of worship songs with just 4 chords — the ultimate beginner hack.",
+        "youtubeId": "BMn7tDmAa0o",
+        "sortOrder": 6,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-51",
+        "title": "Beautiful Piano Riff for \"Holy Forever\"",
+        "description": "Learn a gorgeous piano riff you can drop into Holy Forever and many other worship songs.",
+        "youtubeId": "5d8T0mwtkxE",
+        "sortOrder": 7,
+        "channelName": "Worship Piano Academy"
+      },
+      {
+        "id": "lesson-52",
+        "title": "Suspended (Sus) & Add 4 Chords",
+        "description": "Master suspended and add4 chord voicings — the secret to that modern worship piano sound.",
+        "youtubeId": "hgVQ68JtecU",
+        "sortOrder": 8,
+        "channelName": "Worship Music Academy"
+      },
+      {
+        "id": "lesson-dg-2",
+        "title": "5 Chord Voicings Every Worship Keys Player Needs to Know",
+        "description": "Five essential chord voicings that will immediately elevate your worship keys playing — covering open, spread, and shell voicings used in real services.",
+        "youtubeId": "eIO0WLP3ihY",
+        "sortOrder": 9,
+        "channelName": "David Green"
+      },
+      {
+        "id": "lesson-dg-3",
+        "title": "Master All 12 Keys With This ONE Exercise",
+        "description": "One daily exercise that trains your fingers and your ear to navigate all 12 keys fluently — the fastest path to playing in any key on demand.",
+        "youtubeId": "1LEpqMTImxE",
+        "sortOrder": 10,
+        "channelName": "David Green"
+      },
+      {
+        "id": "lesson-twk-7",
+        "title": "5 Mistakes to Avoid as a Worship Piano Player",
+        "description": "Five common pitfalls that hold worship pianists back — overplaying, too much reverb, poor preparation habits, playing in the wrong register, and wasting prep time — with practical fixes for each.",
+        "youtubeId": "_xVVo2u9qJs",
+        "sortOrder": 11,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-89",
+        "title": "5 Chord Progressions Every Worship Keys Player Should Know",
+        "description": "Alex Smith breaks down 5 essential chord progressions every worship keys player should have in their toolkit.",
+        "youtubeId": "COymFPDe98k",
+        "sortOrder": 12,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  },
+  {
+    "id": "module-8",
+    "title": "7th Chords & Extensions",
+    "description": "Add dominant 7ths, major 7ths, and 7th chord voicings to your worship piano toolbox — the signature lush sound.",
+    "difficulty": "Moderate",
+    "sortOrder": 7,
+    "lessons": [
+      {
+        "id": "lesson-53",
+        "title": "Dominant 7th Chords for Worship Piano",
+        "description": "Build and apply dominant 7th chords in any key — add tension and release to your worship playing.",
+        "youtubeId": "TOP_w_5nx_4",
+        "sortOrder": 0,
+        "channelName": "Pianopoly"
+      },
+      {
+        "id": "lesson-54",
+        "title": "Major 7th Chords — The Lush Sound",
+        "description": "Incorporate major 7th chords into worship progressions for that warm, dreamy modern worship sound.",
+        "youtubeId": "ZeWO9G6jBbA",
+        "sortOrder": 1,
+        "channelName": "Gospel Keys Easy"
+      },
+      {
+        "id": "lesson-55",
+        "title": "7th Chord Gospel Piano Hack",
+        "description": "The 1-5-7 voicing trick every beginner needs — instantly improve your worship piano flow with 7th chords.",
+        "youtubeId": "v0JQL1qFEf4",
+        "sortOrder": 2,
+        "channelName": "Piano Lesson with Warren"
+      }
+    ]
+  },
+  {
+    "id": "module-9",
+    "title": "Sus2, Sus4 & Add9 Chords",
+    "description": "Master the suspended and added-note chord voicings that define the signature sound of modern worship piano.",
+    "difficulty": "Moderate",
+    "sortOrder": 8,
+    "lessons": [
+      {
+        "id": "lesson-56",
+        "title": "Sus2 vs Sus4 — Modernize Your Sound",
+        "description": "Replace standard triads with sus2 and sus4 voicings to create the open, contemporary worship sound.",
+        "youtubeId": "hy3Ku5AcHEA",
+        "sortOrder": 0,
+        "channelName": "Sean Wilson Piano"
+      },
+      {
+        "id": "lesson-57",
+        "title": "Add9 Chords for Worship Piano",
+        "description": "Add the 9th to your triads for that warm, inspirational texture heard in modern worship arrangements.",
+        "youtubeId": "MtI-sbD91AQ",
+        "sortOrder": 1,
+        "channelName": "Piano Tutorials with Chris Ebute"
+      }
+    ]
+  },
+  {
+    "id": "module-10",
+    "title": "Passing Chords & Diminished Harmony",
+    "description": "Add rich passing chords, diminished harmony, and secondary dominants — the gospel language.",
+    "difficulty": "Moderate",
+    "sortOrder": 9,
+    "lessons": [
+      {
+        "id": "lesson-58",
+        "title": "What Are Passing Chords?",
+        "description": "Understand the role of passing chords in gospel piano — how they bridge primary chords with tension and release.",
+        "youtubeId": "yxLf7nLGBcM",
+        "sortOrder": 0,
+        "channelName": "PrettySimpleMusic"
+      },
+      {
+        "id": "lesson-59",
+        "title": "Diminished Passing Chords",
+        "description": "Use diminished chords to walk between primary chords — the most characteristic gospel passing technique.",
+        "youtubeId": "H0zGr3Srbms",
+        "sortOrder": 1,
+        "channelName": "Play Creatively"
+      },
+      {
+        "id": "lesson-60",
+        "title": "Dominant & Secondary Dominants",
+        "description": "Add tension and forward motion with dominant and secondary dominant passing chords.",
+        "youtubeId": "rAVuZy5Ned0",
+        "sortOrder": 2,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-61",
+        "title": "Chromatic Walk-Ups & Bass Movement",
+        "description": "Smooth chromatic bass movement between chord changes — essential for traditional gospel sound.",
+        "youtubeId": "WHYHjrhSlyU",
+        "sortOrder": 3,
+        "channelName": "Piano by Pictures"
+      },
+      {
+        "id": "lesson-twk-8",
+        "title": "Passing Chords & Tritone Bass Substitution on the Piano",
+        "description": "Carson Bruce walks through secondary dominants, tritone substitutions, and how to use them practically in a worship context — a focused theory lesson you can apply right away.",
+        "youtubeId": "szgw39HdP0s",
+        "sortOrder": 4,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  },
+  {
+    "id": "module-11",
+    "title": "Reharmonization & Tritone Substitutions",
+    "description": "Reharmonize songs, master tritone substitutions, and explore modal interchange and altered dominants.",
+    "difficulty": "Moderate",
+    "sortOrder": 10,
+    "lessons": [
+      {
+        "id": "lesson-62",
+        "title": "Reharmonization Techniques",
+        "description": "Learn to reharmonize hymns and gospel songs — replace basic chords with rich, sophisticated harmony.",
+        "youtubeId": "-zBrdXHQQF8",
+        "sortOrder": 0,
+        "channelName": "Gifted Hands Music"
+      },
+      {
+        "id": "lesson-63",
+        "title": "Tritone Substitutions in Gospel",
+        "description": "Master the game-changing tritone substitution and add chromatic tension to your progressions.",
+        "youtubeId": "jrpkBwLkgWw",
+        "sortOrder": 1,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-64",
+        "title": "Modal Interchange & Borrowed Chords",
+        "description": "Borrow chords from parallel modes to create unexpected, emotional harmonic shifts in your playing.",
+        "youtubeId": "Zj01ClJVqWk",
+        "sortOrder": 2,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-65",
+        "title": "Altered Dominants & Upper Structure Triads",
+        "description": "Use altered extensions and upper structure triads for the most sophisticated gospel/jazz voicings.",
+        "youtubeId": "ySXJVu-TrtI",
+        "sortOrder": 3,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-twk-9",
+        "title": "How to Reharmonize Worship Songs — with Clark Beckham",
+        "description": "Clark Beckham breaks down reharmonization on Goodness of God — a masterclass in tasteful chord substitutions that elevate worship without showing off. Covers Sus chords, borrowed chords, and how to keep it serving the song.",
+        "youtubeId": "W37fUuzCHn4",
+        "sortOrder": 4,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-10",
+        "title": "Worship Reharms Part 1 — Goodness of God (Clark Beckham)",
+        "description": "Clark Beckham returns with deeper reharmonizations on Goodness of God — richer chord substitutions, voicings, and a conversation about why reharmonizing is an act of worship, not performance.",
+        "youtubeId": "eY8IplFUS9Y",
+        "sortOrder": 5,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-11",
+        "title": "Worship Reharms Part 2 — How Great Is Our God & Graves into Gardens (Clark Beckham)",
+        "description": "Clark Beckham closes the series with full reharmonizations of How Great Is Our God and Graves into Gardens — practical music theory insights for worship pianists at every level.",
+        "youtubeId": "nvuKxJuyz7U",
+        "sortOrder": 6,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  },
+  {
+    "id": "module-12",
+    "title": "Shout Music & Praise Breaks",
+    "description": "Master the rhythmic and harmonic blueprint of shout music, praise breaks, and driving gospel energy.",
+    "difficulty": "Moderate",
+    "sortOrder": 11,
+    "lessons": [
+      {
+        "id": "lesson-66",
+        "title": "Shout Music Fundamentals",
+        "description": "The rhythmic and harmonic blueprint of shout music — the driving force of uptempo gospel.",
+        "youtubeId": "Ma_90BRPSww",
+        "sortOrder": 0,
+        "channelName": "SOJ Music Lab"
+      },
+      {
+        "id": "lesson-67",
+        "title": "Classic Shout Runs",
+        "description": "Essential shout runs every gospel pianist should know — the signature licks of uptempo gospel music.",
+        "youtubeId": "CgtlowA6WVE",
+        "sortOrder": 1,
+        "channelName": "Dion Todman"
+      },
+      {
+        "id": "lesson-68",
+        "title": "Praise Break Transitions",
+        "description": "Smoothly move between worship ballad and uptempo praise — master the build-up and release.",
+        "youtubeId": "GMwr0KvOscc",
+        "sortOrder": 2,
+        "channelName": "Deyquan Bowens"
+      },
+      {
+        "id": "lesson-69",
+        "title": "Left-Hand Bass Patterns for Gospel",
+        "description": "Driving left-hand bass riffs and patterns that anchor shout music and give it relentless energy.",
+        "youtubeId": "YSn6RTGxfao",
+        "sortOrder": 3,
+        "channelName": "Mr. Jonathan -The Piano Teacher"
+      }
+    ]
+  },
+  {
+    "id": "module-13",
+    "title": "Contemporary Worship & Modern Gospel",
+    "description": "Modern worship textures, contemporary progressions, vamps, and neo-soul gospel harmony.",
+    "difficulty": "Moderate",
+    "sortOrder": 12,
+    "lessons": [
+      {
+        "id": "lesson-70",
+        "title": "Modern Worship Piano: Pads & Textures",
+        "description": "Create ambient pads, synth textures, and modern worship soundscapes on piano and keys.",
+        "youtubeId": "_IAiDLrl3v4",
+        "sortOrder": 0,
+        "channelName": "Sunday Sounds"
+      },
+      {
+        "id": "lesson-71",
+        "title": "Contemporary Gospel Chord Progressions",
+        "description": "Learn the chord progressions and voicings used in contemporary gospel and worship music.",
+        "youtubeId": "6xhWaCFaYY4",
+        "sortOrder": 1,
+        "channelName": "hearandplay"
+      },
+      {
+        "id": "lesson-72",
+        "title": "Building Gospel Piano Vamps",
+        "description": "Master the art of the vamp — cycling progressions that build energy and create spontaneous moments.",
+        "youtubeId": "XUQqIfuZFWo",
+        "sortOrder": 2,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-73",
+        "title": "Neo-Soul Chords for Gospel Piano",
+        "description": "Learn the lush neo-soul chord voicings that define modern gospel — used by Cory Henry and contemporaries.",
+        "youtubeId": "f2t0l-r0rIA",
+        "sortOrder": 3,
+        "channelName": "PrettySimpleMusic"
+      },
+      {
+        "id": "lesson-twk-12",
+        "title": "Blending CCM & Gospel on the Piano — with Carlous Drake",
+        "description": "Carlous Drake demonstrates how to bring gospel flavor into contemporary worship — gospel chord changes (5-4-3-6-2), talk music, melody playing, and how to add gospel energy to a CCM setting without overwhelming it.",
+        "youtubeId": "Rg8JLl6NqxM",
+        "sortOrder": 4,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-13",
+        "title": "Funky Chord Progressions in CCM — with Natalie Layne",
+        "description": "Natalie Layne shows how jazz-influenced voicings and chord extensions can make simple 4-chord worship songs sound far more interesting — the secret is smart note placement, not more notes.",
+        "youtubeId": "MOLEtckYVDI",
+        "sortOrder": 5,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  },
+  {
+    "id": "module-14",
+    "title": "Rootless Voicings & Advanced Harmony",
+    "description": "Rootless voicings, neo-soul harmony, and the call-and-response tradition of gospel piano.",
+    "difficulty": "Hard",
+    "sortOrder": 13,
+    "lessons": [
+      {
+        "id": "lesson-74",
+        "title": "Rootless Chord Voicings for Gospel & Jazz",
+        "description": "Master rootless voicings — essential for playing with a bass player and achieving a clean modern sound.",
+        "youtubeId": "XKcWXv1Ui28",
+        "sortOrder": 0,
+        "channelName": "Gifted Hands Music"
+      },
+      {
+        "id": "lesson-75",
+        "title": "Neo-Soul Gospel Progressions",
+        "description": "Explore the sophisticated neo-soul chord progressions that define the sound of modern gospel music.",
+        "youtubeId": "7i7oSTXhndE",
+        "sortOrder": 1,
+        "channelName": "PrettySimpleMusic"
+      },
+      {
+        "id": "lesson-76",
+        "title": "Call & Response Phrasing",
+        "description": "Master the conversational call-and-response style of traditional gospel improvisation and quartet playing.",
+        "youtubeId": "xd5tgQSbIZ4",
+        "sortOrder": 2,
+        "channelName": "Mr. Jonathan -The Piano Teacher"
+      }
+    ]
+  },
+  {
+    "id": "module-15",
+    "title": "Advanced Improvisation & Performance",
+    "description": "Solo confidently, lock in with a band, and perform in the style of gospel greats like Fred Hammond.",
+    "difficulty": "Hard",
+    "sortOrder": 14,
+    "lessons": [
+      {
+        "id": "lesson-77",
+        "title": "Soloing Over Full Gospel Progressions",
+        "description": "Put it all together — improvise over full gospel chord progressions with confidence and musicality.",
+        "youtubeId": "kn9dfj2RAU8",
+        "sortOrder": 0,
+        "channelName": "PrettySimpleMusic"
+      },
+      {
+        "id": "lesson-78",
+        "title": "Playing with a Band: Locking In",
+        "description": "Learn how to lock in with drums and bass — essential for any gospel keyboardist playing with a band.",
+        "youtubeId": "thAOQQI_nTk",
+        "sortOrder": 1,
+        "channelName": "DonMoenTV"
+      },
+      {
+        "id": "lesson-79",
+        "title": "Fred Hammond Style Gospel Piano",
+        "description": "Learn to play in the style of Fred Hammond — one of contemporary gospel music greatest innovators.",
+        "youtubeId": "qVOZoSsjPI0",
+        "sortOrder": 2,
+        "channelName": "Mr. Jonathan -The Piano Teacher"
+      }
+    ]
+  },
+  {
+    "id": "module-16",
+    "title": "Artist Styles: Cory Henry, Kirk Franklin, Israel Houghton & More",
+    "description": "Study the harmonic language and techniques of the most influential modern gospel keyboardists and bandleaders.",
+    "difficulty": "Hard",
+    "sortOrder": 15,
+    "lessons": [
+      {
+        "id": "lesson-80",
+        "title": "Cory Henry Style: Jazz-Gospel Fusion",
+        "description": "Deconstruct the harmonic language and improvisational genius of Cory Henry — the modern gospel/jazz master.",
+        "youtubeId": "mZmhnMZUag0",
+        "sortOrder": 0,
+        "channelName": "pianolab"
+      },
+      {
+        "id": "lesson-81",
+        "title": "Kirk Franklin Style: Gospel Jazz Chords & Passing Progressions",
+        "description": "Master the jazz-influenced gospel chord substitutions, syncopated rhythms and passing chords that define Kirk Franklin arrangements.",
+        "youtubeId": "6WizC1IEZZQ",
+        "sortOrder": 1,
+        "channelName": "Emanuel Blanco Piano"
+      },
+      {
+        "id": "lesson-82",
+        "title": "Israel Houghton Style: Modern Worship & Anthem Piano",
+        "description": "Learn the lush quartal voicings, anthem-driven energy, and contemporary worship piano style of Israel Houghton.",
+        "youtubeId": "hLyY9cVdvU8",
+        "sortOrder": 2,
+        "channelName": "MAJESTY'S HOUSE OF MUSIC"
+      },
+      {
+        "id": "lesson-83",
+        "title": "Jason White & Mike Bereal Style",
+        "description": "Learn the complex reharmonizations and church bebop style of gospel legends Jason White and Mike Bereal.",
+        "youtubeId": "DZh1IAySnMo",
+        "sortOrder": 3,
+        "channelName": "Minstrel School of Music"
+      },
+      {
+        "id": "lesson-84",
+        "title": "Leading Worship from the Piano",
+        "description": "Develop the confidence and skills to lead a worship set from the piano with authority and musicality.",
+        "youtubeId": "5fgBy-O4bso",
+        "sortOrder": 4,
+        "channelName": "Sunday Sounds"
+      },
+      {
+        "id": "lesson-85",
+        "title": "Musical Direction & Talk Music",
+        "description": "Learn the keyboardist role in guiding the band — setting tone, signaling changes, and holding down talk music.",
+        "youtubeId": "W1Ivj4sDlO4",
+        "sortOrder": 5,
+        "channelName": "PrettySimpleMusic"
+      }
+    ]
+  },
+  {
+    "id": "module-17",
+    "title": "Worship Flow & Service Leadership",
+    "description": "Master spontaneous modulation, following singers, and creating seamless worship service transitions.",
+    "difficulty": "Hard",
+    "sortOrder": 16,
+    "lessons": [
+      {
+        "id": "lesson-86",
+        "title": "Spontaneous Modulation: Smooth Key Changes",
+        "description": "Unlock the secrets of changing keys smoothly during worship — essential for spontaneous moments.",
+        "youtubeId": "vVu3HAkJ5cw",
+        "sortOrder": 0,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-87",
+        "title": "Following Singers & Accompanying Vocalists",
+        "description": "Master breath, flow, and feel — how to follow a singer sensitively and support them with the piano.",
+        "youtubeId": "QYlQ4r5mVmo",
+        "sortOrder": 1,
+        "channelName": "Piano Lesson with Warren"
+      },
+      {
+        "id": "lesson-88",
+        "title": "Worship Transitions & Service Flow",
+        "description": "Learn to create seamless transitions between songs and moments — the mark of a professional church musician.",
+        "youtubeId": "eX_PLnB0lMc",
+        "sortOrder": 2,
+        "channelName": "DonMoenTV"
+      },
+      {
+        "id": "lesson-twk-14",
+        "title": "Playing Spirit-Led Spontaneous Worship Keys — with Caleb King",
+        "description": "Caleb King shares how he approaches spontaneous worship moments — staying in the current key, following the room, practical use of Ableton's transpose button, and building a culture of flow on your worship team.",
+        "youtubeId": "ZkEMgXR3jaw",
+        "sortOrder": 3,
+        "channelName": "The Worship Keys"
+      },
+      {
+        "id": "lesson-twk-15",
+        "title": "Worship Moment on Solo Piano — with Micai George",
+        "description": "Micai George demonstrates a soaking-style solo piano worship moment and shares wisdom on being a music director — leaving space, being sensitive to the Spirit, and finding your own sound as a worship pianist.",
+        "youtubeId": "KBPJ7RTIbVY",
+        "sortOrder": 4,
+        "channelName": "The Worship Keys"
+      }
+    ]
+  }
+]
