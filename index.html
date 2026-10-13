@@ -591,6 +591,18 @@
       max-width: 900px;
       width: 100%;
       margin: 0 auto;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-pane.page-embed {
+      max-width: none;
+      padding: 12px 16px 16px;
+    }
+    .video-pane.page-embed .video-meta {
+      order: -1;
+      margin-top: 0;
+      margin-bottom: 12px;
     }
     .video-wrap {
       position: relative;
@@ -601,12 +613,23 @@
       background: #000;
       box-shadow: 0 8px 40px rgba(0,0,0,.12);
     }
+    .video-wrap.page-embed {
+      padding-bottom: 0;
+      flex: 1;
+      min-height: 70vh;
+      background: var(--fill);
+    }
     .video-wrap iframe {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       border: none;
+    }
+    .video-wrap.page-embed iframe {
+      position: relative;
+      height: 100%;
+      min-height: 70vh;
     }
 
     .video-meta {
@@ -1605,7 +1628,7 @@
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
               </svg>
             </button>
-            <button class="help-btn" onclick="openHelp()" aria-label="Youtube Player Control" title="Youtube Player Control">?</button>
+            <button class="help-btn" id="helpBtn" onclick="openHelp()" aria-label="Youtube Player Control" title="Youtube Player Control">?</button>
             <span class="video-badge" id="videoBadge"></span>
           </div>
         </div>
@@ -1764,6 +1787,11 @@ function goHome() {
 
   // Clear iframe so video stops
   document.getElementById('ytFrame').src = '';
+  document.getElementById('videoPane').classList.remove('page-embed');
+  const wrapHome = document.querySelector('#videoPane .video-wrap');
+  if (wrapHome) wrapHome.classList.remove('page-embed');
+  const helpHome = document.getElementById('helpBtn');
+  if (helpHome) helpHome.style.display = '';
 
   // Show welcome pane
   document.getElementById('welcomePane').classList.remove('hidden');
@@ -1978,9 +2006,23 @@ function selectLesson(mod, lesson) {
   const vp = document.getElementById('videoPane');
   vp.classList.remove('hidden');
 
-  // Set iframe src
-  document.getElementById('ytFrame').src =
-    `https://www.youtube.com/embed/${lesson.youtubeId}?rel=0&modestbranding=1`;
+  const isPageEmbed = !!lesson.embedUrl;
+  const wrap = vp.querySelector('.video-wrap');
+  const frame = document.getElementById('ytFrame');
+  const helpBtn = document.getElementById('helpBtn');
+  vp.classList.toggle('page-embed', isPageEmbed);
+  wrap.classList.toggle('page-embed', isPageEmbed);
+  if (helpBtn) helpBtn.style.display = isPageEmbed ? 'none' : '';
+
+  if (isPageEmbed) {
+    frame.src = lesson.embedUrl;
+    frame.title = lesson.title;
+    frame.removeAttribute('allowfullscreen');
+  } else {
+    frame.src = `https://www.youtube.com/embed/${lesson.youtubeId}?rel=0&modestbranding=1`;
+    frame.title = 'YouTube lesson';
+    frame.setAttribute('allowfullscreen', '');
+  }
 
   // Meta
   document.getElementById('videoTitle').textContent = lesson.title;
@@ -2002,7 +2044,9 @@ function selectLesson(mod, lesson) {
   channelEl.textContent = lesson.channelName || '';
   document.getElementById('videoChannel').style.display = lesson.channelName ? 'inline-flex' : 'none';
 
-  document.getElementById('videoChannel').href = `https://www.youtube.com/watch?v=${lesson.youtubeId}`;
+  document.getElementById('videoChannel').href = isPageEmbed
+    ? lesson.embedUrl
+    : `https://www.youtube.com/watch?v=${lesson.youtubeId}`;
 
   // Mark lesson visited
   markVisited(mod.id, lesson.id);
@@ -2013,7 +2057,7 @@ function selectLesson(mod, lesson) {
   });
 
   // Update star button
-  updateStarBtn(lesson.youtubeId);
+  updateStarBtn(lessonBookmarkKey(lesson));
 
   // On mobile, close sidebar after selecting
   if (window.innerWidth < 768) closeSidebar();
@@ -2214,8 +2258,12 @@ function saveBookmarks(arr) {
   updateBookmarksBadge();
 }
 
-function isBookmarked(youtubeId) {
-  return getBookmarks().some(b => b.youtubeId === youtubeId);
+function lessonBookmarkKey(lesson) {
+  return lesson.youtubeId || lesson.id;
+}
+
+function isBookmarked(key) {
+  return getBookmarks().some(b => b.youtubeId === key);
 }
 
 function toggleStar() {
@@ -2224,13 +2272,15 @@ function toggleStar() {
   const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
   if (!mod || !lesson) return;
 
+  const key = lessonBookmarkKey(lesson);
   let bookmarks = getBookmarks();
-  const idx = bookmarks.findIndex(b => b.youtubeId === lesson.youtubeId);
+  const idx = bookmarks.findIndex(b => b.youtubeId === key);
   if (idx >= 0) {
     bookmarks.splice(idx, 1);
   } else {
     bookmarks.push({
-      youtubeId:   lesson.youtubeId,
+      youtubeId:   key,
+      embedUrl:    lesson.embedUrl || '',
       title:       lesson.title,
       description: lesson.description,
       channelName: lesson.channelName || '',
@@ -2241,13 +2291,13 @@ function toggleStar() {
     });
   }
   saveBookmarks(bookmarks);
-  updateStarBtn(lesson.youtubeId);
+  updateStarBtn(key);
 }
 
-function updateStarBtn(youtubeId) {
+function updateStarBtn(key) {
   const btn = document.getElementById('starBtn');
   if (!btn) return;
-  const starred = isBookmarked(youtubeId);
+  const starred = isBookmarked(key);
   btn.classList.toggle('starred', starred);
   btn.title = starred ? 'Remove bookmark' : 'Save for later';
   btn.setAttribute('aria-label', starred ? 'Remove bookmark' : 'Save lesson');
@@ -2304,7 +2354,7 @@ function clearAllBookmarks() {
   if (activeLesson) {
     const mod    = data.find(m => m.id === activeLesson.moduleId);
     const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
-    if (lesson) updateStarBtn(lesson.youtubeId);
+    if (lesson) updateStarBtn(lessonBookmarkKey(lesson));
   }
 }
 
@@ -2316,7 +2366,7 @@ function removeBookmark(youtubeId, e) {
   if (activeLesson) {
     const mod    = data.find(m => m.id === activeLesson.moduleId);
     const lesson = mod?.lessons.find(l => l.id === activeLesson.lessonId);
-    if (lesson && lesson.youtubeId === youtubeId) updateStarBtn(youtubeId);
+    if (lesson && lessonBookmarkKey(lesson) === youtubeId) updateStarBtn(youtubeId);
   }
 }
 
@@ -2340,13 +2390,15 @@ function renderSavedPage() {
   grid.innerHTML = bookmarks.map(b => `
     <div class="saved-card" onclick="openSavedLesson('${b.moduleId}','${b.lessonId}')">
       <div class="saved-card-thumb-wrap">
-        <img class="saved-card-thumb" src="https://img.youtube.com/vi/${b.youtubeId}/mqdefault.jpg" alt="${escHtml(b.title)}" loading="lazy" />
+        ${b.embedUrl
+          ? `<div class="saved-card-thumb" style="display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;">WO</div>`
+          : `<img class="saved-card-thumb" src="https://img.youtube.com/vi/${b.youtubeId}/mqdefault.jpg" alt="${escHtml(b.title)}" loading="lazy" />`}
         <div class="saved-card-play">
           <div class="saved-card-play-icon">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           </div>
         </div>
-        <button class="saved-card-remove" onclick="removeBookmark('${b.youtubeId}', event)" aria-label="Remove">×</button>
+        <button class="saved-card-remove" onclick="removeBookmark('${escHtml(b.youtubeId)}', event)" aria-label="Remove">×</button>
       </div>
       <div class="saved-card-body">
         <div class="saved-card-title">${escHtml(b.title)}</div>

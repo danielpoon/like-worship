@@ -479,6 +479,31 @@
     ]
   },
   {
+    "id": "module-worship-online",
+    "title": "Worship Online",
+    "description": "Full-band tutorials from Worship Online — guitar, bass, keys, drums, and vocals in one page.",
+    "difficulty": "Song Tutorials",
+    "sortOrder": 5.5,
+    "lessons": [
+      {
+        "id": "lesson-wo-holy-forever",
+        "title": "Holy Forever",
+        "description": "Worship Online lesson for Holy Forever by Chris Tomlin — electrics, acoustic, bass, keys, drums, and vocals.",
+        "embedUrl": "https://app.worshiponline.com/songs/587-chris-tomlin--holy-forever",
+        "sortOrder": 0,
+        "channelName": "Worship Online"
+      },
+      {
+        "id": "lesson-wo-beautiful-name",
+        "title": "What a Beautiful Name",
+        "description": "Worship Online lesson for What a Beautiful Name by Hillsong Worship — electrics, acoustic, bass, keys, drums, and vocals.",
+        "embedUrl": "https://app.worshiponline.com/songs/258-hillsong-worship--what-a-beautiful-name",
+        "sortOrder": 1,
+        "channelName": "Worship Online"
+      }
+    ]
+  },
+  {
     "id": "module-7",
     "title": "Piano Techniques & Riffs",
     "description": "Pro-level techniques: smooth transitions, dynamics, and signature worship piano riffs.",
